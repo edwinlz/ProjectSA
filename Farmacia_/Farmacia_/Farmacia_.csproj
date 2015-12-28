@@ -84,8 +84,8 @@
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\npm.js" />
     <Content Include="presencial.aspx" />
-    <Content Include="Service References\ws\configuration91.svcinfo" />
-    <Content Include="Service References\ws\configuration.svcinfo" />
+    <None Include="Service References\ws\configuration91.svcinfo" />
+    <None Include="Service References\ws\configuration.svcinfo" />
     <Content Include="Service References\ws\Farmacia_.ws.ArrayOfInt.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -110,10 +110,10 @@
     <Content Include="Service References\ws\Farmacia_.ws.registrar_compraResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Service References\ws\Reference.svcmap">
+    <None Include="Service References\ws\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
-    </Content>
+    </None>
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -200,7 +200,7 @@
     <Content Include="fonts\fontawesome-webfont.ttf" />
     <Content Include="fonts\fontawesome-webfont.woff" />
     <Content Include="fonts\FontAwesome.otf" />
-    <Content Include="Service References\ws\Service.wsdl" />
+    <None Include="Service References\ws\Service.wsdl" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

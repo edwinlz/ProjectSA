@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="consultarCliente.aspx.cs" Inherits="Farmacia_.compra" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="consultarCliente.aspx.cs" Inherits="Farmacia_.consultarCliente" %>
 
 <!DOCTYPE html>
 
@@ -14,8 +14,11 @@
     <title>Farmacia</title>
 
     <!-- Bootstrap Core CSS and Custom CSS-->
+    <link href="css/bootstrap.css" rel="stylesheet" />
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/shop-homepage.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css' />
 
 </head>
 <body>
@@ -25,29 +28,11 @@
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">La Vida Futura</a>
+                <!-- <a class="navbar-brand" href="#">La Vida Futura</a> -->
+                <div class="logo text-center">
+                    <h2>La Vida Futura</h2>
+                </div>
             </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="#">Menu 1</a>
-                    </li>
-                    <li>
-                        <a href="#">Menu 2</a>
-                    </li>
-                    <li>
-                        <a href="#">Menu 3</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
         </div>
         <!-- /.container -->
     </nav>
@@ -59,21 +44,28 @@
 
             <div class="col-md-3">
                 <p class="lead">Clientes</p>
+
                 <div class="list-group">
-                    <a href="cliente.aspx" class="list-group-item">Nuevo cliente</a>
-                    <a href="consultarCliente.aspx" class="list-group-item">Consultar cliente</a>
+                    <a class="list-group-item" href="presencial.aspx"><i class="glyphicon glyphicon-home"></i>&nbsp; Home</a>
+                    <a class="list-group-item" href="cliente.aspx"><i class="glyphicon glyphicon-plus"></i>&nbsp; Nuevo Cliente</a>
+                    <a class="list-group-item" href="consultarCliente.aspx"><i class="glyphicon glyphicon-book"></i>&nbsp; Consultar Cliente</a>
                 </div>
             </div>
 
             <div class="col-md-6">
-                <form role="form">
+                <hr />
+                <h1>Consultar Cliente</h1>
+                <form role="form" id="formulario_1" runat="server">
                     <div class="form-group">
                         <label for="nit_cliente">NIT</label>
-                        <input class="form-control" id="nit_cliente" />
+                        <asp:TextBox ID="nit_cliente" CssClass="form-control" runat="server" required=""></asp:TextBox>
                     </div>
-                    <button type="submit" class="btn btn-default">Submit</button>
-                </form>
 
+                    <!--Boton enviar nueva consulta-->
+                    <asp:Button ID="Button1" CssClass="btn btn-success" runat="server" Text="Submit" OnClick="Button1_Click" />
+                </form>
+                <br />
+                <div id="d" runat="server"></div>
             </div>
         </div>
 

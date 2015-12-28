@@ -382,12 +382,12 @@ namespace Farmacia_.ws {
     public partial class consultar_medicamentosResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public Farmacia_.ws.ArrayOfString[] consultar_medicamentosResult;
+        public System.Collections.Generic.List<Farmacia_.ws.ArrayOfString> consultar_medicamentosResult;
         
         public consultar_medicamentosResponseBody() {
         }
         
-        public consultar_medicamentosResponseBody(Farmacia_.ws.ArrayOfString[] consultar_medicamentosResult) {
+        public consultar_medicamentosResponseBody(System.Collections.Generic.List<Farmacia_.ws.ArrayOfString> consultar_medicamentosResult) {
             this.consultar_medicamentosResult = consultar_medicamentosResult;
         }
     }
@@ -443,12 +443,12 @@ namespace Farmacia_.ws {
     public partial class consultar_farmaciasResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public Farmacia_.ws.ArrayOfString[] consultar_farmaciasResult;
+        public System.Collections.Generic.List<Farmacia_.ws.ArrayOfString> consultar_farmaciasResult;
         
         public consultar_farmaciasResponseBody() {
         }
         
-        public consultar_farmaciasResponseBody(Farmacia_.ws.ArrayOfString[] consultar_farmaciasResult) {
+        public consultar_farmaciasResponseBody(System.Collections.Generic.List<Farmacia_.ws.ArrayOfString> consultar_farmaciasResult) {
             this.consultar_farmaciasResult = consultar_farmaciasResult;
         }
     }
@@ -504,12 +504,12 @@ namespace Farmacia_.ws {
     public partial class consultar_clientesResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public Farmacia_.ws.ArrayOfString[] consultar_clientesResult;
+        public System.Collections.Generic.List<Farmacia_.ws.ArrayOfString> consultar_clientesResult;
         
         public consultar_clientesResponseBody() {
         }
         
-        public consultar_clientesResponseBody(Farmacia_.ws.ArrayOfString[] consultar_clientesResult) {
+        public consultar_clientesResponseBody(System.Collections.Generic.List<Farmacia_.ws.ArrayOfString> consultar_clientesResult) {
             this.consultar_clientesResult = consultar_clientesResult;
         }
     }
@@ -659,7 +659,7 @@ namespace Farmacia_.ws {
             return base.Channel.consultar_medicamentos(request);
         }
         
-        public Farmacia_.ws.ArrayOfString[] consultar_medicamentos(int codigo_farmacia) {
+        public System.Collections.Generic.List<Farmacia_.ws.ArrayOfString> consultar_medicamentos(int codigo_farmacia) {
             Farmacia_.ws.consultar_medicamentosRequest inValue = new Farmacia_.ws.consultar_medicamentosRequest();
             inValue.Body = new Farmacia_.ws.consultar_medicamentosRequestBody();
             inValue.Body.codigo_farmacia = codigo_farmacia;
@@ -684,7 +684,7 @@ namespace Farmacia_.ws {
             return base.Channel.consultar_farmacias(request);
         }
         
-        public Farmacia_.ws.ArrayOfString[] consultar_farmacias() {
+        public System.Collections.Generic.List<Farmacia_.ws.ArrayOfString> consultar_farmacias() {
             Farmacia_.ws.consultar_farmaciasRequest inValue = new Farmacia_.ws.consultar_farmaciasRequest();
             inValue.Body = new Farmacia_.ws.consultar_farmaciasRequestBody();
             Farmacia_.ws.consultar_farmaciasResponse retVal = ((Farmacia_.ws.ServiceSoap)(this)).consultar_farmacias(inValue);
@@ -707,7 +707,7 @@ namespace Farmacia_.ws {
             return base.Channel.consultar_clientes(request);
         }
         
-        public Farmacia_.ws.ArrayOfString[] consultar_clientes() {
+        public System.Collections.Generic.List<Farmacia_.ws.ArrayOfString> consultar_clientes() {
             Farmacia_.ws.consultar_clientesRequest inValue = new Farmacia_.ws.consultar_clientesRequest();
             inValue.Body = new Farmacia_.ws.consultar_clientesRequestBody();
             Farmacia_.ws.consultar_clientesResponse retVal = ((Farmacia_.ws.ServiceSoap)(this)).consultar_clientes(inValue);
