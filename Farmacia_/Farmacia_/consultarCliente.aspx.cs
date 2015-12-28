@@ -29,14 +29,12 @@ namespace Farmacia_
                "<td>" + lista[0] + "</td><td>" + lista[1] + "</td><td>" + lista[2] + "</td>" +
                "</tr></tbody></table>";
                 d.Controls.Add(new LiteralControl(texto));
-                
-            }else{
+
+            }
+            else
+            {
                 MessageBox.Show(this, "Error: Hubo un problema al recuperar cliente");
             }
-
-            /*
-
-            */
         }
     }
 

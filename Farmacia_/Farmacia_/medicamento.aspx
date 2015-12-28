@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="medicamento.aspx.cs" Inherits="Farmacia_.compra" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="medicamento.aspx.cs" Inherits="Farmacia_.medicamento" %>
 
 <!DOCTYPE html>
 
@@ -14,8 +14,11 @@
     <title>Farmacia</title>
 
     <!-- Bootstrap Core CSS and Custom CSS-->
+    <link href="css/bootstrap.css" rel="stylesheet" />
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/shop-homepage.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css' />
 
 </head>
 <body>
@@ -25,29 +28,11 @@
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">La Vida Futura</a>
+                <!-- <a class="navbar-brand" href="#">La Vida Futura</a> -->
+                <div class="logo text-center">
+                    <h2>La Vida Futura</h2>
+                </div>
             </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="#">Menu 1</a>
-                    </li>
-                    <li>
-                        <a href="#">Menu 2</a>
-                    </li>
-                    <li>
-                        <a href="#">Menu 3</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
         </div>
         <!-- /.container -->
     </nav>
@@ -58,34 +43,37 @@
         <div class="row">
 
             <div class="col-md-3">
-                <p class="lead">Medicamento</p>
+                <p class="lead">Medicamentos</p>
+
                 <div class="list-group">
-                    <a href="#" class="list-group-item">Consulta Medicamento</a>
+                    <a class="list-group-item" href="presencial.aspx"><i class="glyphicon glyphicon-home"></i>&nbsp; Home</a>
+                    <a class="list-group-item" href="medicamento.aspx"><i class="glyphicon glyphicon-search"></i>&nbsp; Consultar Medicamento</a>
+                    <a class="list-group-item" href="#"><i class="glyphicon glyphicon-book"></i>&nbsp; Medicamentos</a>
                 </div>
             </div>
 
             <div class="col-md-6">
-                <form role="form">
-                    <div class="form-group">
-                        <label for="cod_farmacia">Codigo Farmacia</label>
-                        <input class="form-control" id="cod_farmacia" />
-                    </div>
+                <hr />
+                <h1>Consultar Medicamento</h1>
+                <form role="form" id="formulario_1" runat="server">
                     <div class="form-group">
                         <label for="cod_medicamento">Codigo Medicamento</label>
-                        <input class="form-control" id="cod_medicamento" />
+                        <asp:TextBox ID="cod_medicamento" CssClass="form-control" runat="server" placeholder="Opcional"></asp:TextBox>
                     </div>
                     <div class="form-group">
                         <label for="nom_comercial">Nombre Comercial</label>
-                        <input class="form-control" id="nom_comercial" />
+                        <asp:TextBox ID="nom_comercial" CssClass="form-control" runat="server" placeholder="Opcional"></asp:TextBox>
                     </div>
                     <div class="form-group">
                         <label for="nom_generico">Nombre Generico</label>
-                        <input class="form-control" id="nom_generico" />
+                        <asp:TextBox ID="nom_generico" CssClass="form-control" runat="server" placeholder="Opcional"></asp:TextBox>
                     </div>
 
-                    <button type="submit" class="btn btn-default">Submit</button>
+                    <!--Boton enviar nueva consulta-->
+                    <asp:Button ID="Button1" CssClass="btn btn-success" runat="server" Text="Submit" OnClick="Button1_Click" />
                 </form>
-
+                <br />
+                <div id="d" runat="server"></div>
             </div>
 
         </div>
