@@ -13,3 +13,5 @@ Formularios disponibles:
 - Consultar cliente
 - Consultar Medicamento
 
+Formularios terminados:
+- Nuevo cliente
