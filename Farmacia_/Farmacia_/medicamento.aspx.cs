@@ -18,8 +18,9 @@ namespace Farmacia_
         protected void Button1_Click(object sender, EventArgs e)
         {
             ws.ServiceSoapClient wsb = new ws.ServiceSoapClient();
-
-            List<ArrayOfString> datos = wsb.consultar_medicamentos(1);
+            int codigo = Convert.ToInt32(System.IO.File.ReadAllText("/Farmacia/codigo_tienda.txt"));
+            
+            List<ArrayOfString> datos = wsb.consultar_medicamentos(codigo);
 
             if (datos != null)
             {
@@ -35,11 +36,13 @@ namespace Farmacia_
 
                 texto += "</tbody></table>";
                 d.Controls.Add(new LiteralControl(texto));
+             
             }
             else
             {
                 MessageBox.Show(this, "Error: Hubo un problema al recuperar cliente");
             }
+             
         }
     }
 }

@@ -60,7 +60,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="callcenter.aspx" />
-    <Content Include="codigo_tienda.txt" />
     <Content Include="compra.aspx" />
     <Content Include="cliente.aspx" />
     <Content Include="consultarCliente.aspx" />
