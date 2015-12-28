@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:element name="registrar_compra">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="codigo_tienda" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="codigo_cliente" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="codigo_productos" type="tns:ArrayOfInt" />
+            <s:element minOccurs="0" maxOccurs="1" name="unidades_productos" type="tns:ArrayOfInt" />
+            <s:element minOccurs="1" maxOccurs="1" name="tipo_pago" type="s1:char" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfInt">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="int" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="registrar_compraResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="registrar_compraResult" type="tns:ArrayOfInt" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="registrar_pago">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="codigo_farmacia" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="codigo_cliente" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="codigo_compra" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="registrar_pagoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="registrar_pagoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="registrar_cliente">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="nit" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="telefono" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="direccion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="registrar_clienteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="registrar_clienteResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="registrar_pedido">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="codigo_tienda" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="codigo_compra" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="registrar_pedidoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="registrar_pedidoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="cancelar_pedido">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="codigo_compra" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="cancelar_pedidoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="cancelar_pedidoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="consultar_cliente">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nit" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="consultar_clienteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="consultar_clienteResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="consultar_medicamentos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="codigo_farmacia" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="consultar_medicamentosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="consultar_medicamentosResult" type="tns:ArrayOfArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ArrayOfString" nillable="true" type="tns:ArrayOfString" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="consultar_farmacias">
+        <s:complexType />
+      </s:element>
+      <s:element name="consultar_farmaciasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="consultar_farmaciasResult" type="tns:ArrayOfArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="consultar_clientes">
+        <s:complexType />
+      </s:element>
+      <s:element name="consultar_clientesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="consultar_clientesResult" type="tns:ArrayOfArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="char">
+        <s:restriction base="s:unsignedShort" />
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="registrar_compraSoapIn">
+    <wsdl:part name="parameters" element="tns:registrar_compra" />
+  </wsdl:message>
+  <wsdl:message name="registrar_compraSoapOut">
+    <wsdl:part name="parameters" element="tns:registrar_compraResponse" />
+  </wsdl:message>
+  <wsdl:message name="registrar_pagoSoapIn">
+    <wsdl:part name="parameters" element="tns:registrar_pago" />
+  </wsdl:message>
+  <wsdl:message name="registrar_pagoSoapOut">
+    <wsdl:part name="parameters" element="tns:registrar_pagoResponse" />
+  </wsdl:message>
+  <wsdl:message name="registrar_clienteSoapIn">
+    <wsdl:part name="parameters" element="tns:registrar_cliente" />
+  </wsdl:message>
+  <wsdl:message name="registrar_clienteSoapOut">
+    <wsdl:part name="parameters" element="tns:registrar_clienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="registrar_pedidoSoapIn">
+    <wsdl:part name="parameters" element="tns:registrar_pedido" />
+  </wsdl:message>
+  <wsdl:message name="registrar_pedidoSoapOut">
+    <wsdl:part name="parameters" element="tns:registrar_pedidoResponse" />
+  </wsdl:message>
+  <wsdl:message name="cancelar_pedidoSoapIn">
+    <wsdl:part name="parameters" element="tns:cancelar_pedido" />
+  </wsdl:message>
+  <wsdl:message name="cancelar_pedidoSoapOut">
+    <wsdl:part name="parameters" element="tns:cancelar_pedidoResponse" />
+  </wsdl:message>
+  <wsdl:message name="consultar_clienteSoapIn">
+    <wsdl:part name="parameters" element="tns:consultar_cliente" />
+  </wsdl:message>
+  <wsdl:message name="consultar_clienteSoapOut">
+    <wsdl:part name="parameters" element="tns:consultar_clienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="consultar_medicamentosSoapIn">
+    <wsdl:part name="parameters" element="tns:consultar_medicamentos" />
+  </wsdl:message>
+  <wsdl:message name="consultar_medicamentosSoapOut">
+    <wsdl:part name="parameters" element="tns:consultar_medicamentosResponse" />
+  </wsdl:message>
+  <wsdl:message name="consultar_farmaciasSoapIn">
+    <wsdl:part name="parameters" element="tns:consultar_farmacias" />
+  </wsdl:message>
+  <wsdl:message name="consultar_farmaciasSoapOut">
+    <wsdl:part name="parameters" element="tns:consultar_farmaciasResponse" />
+  </wsdl:message>
+  <wsdl:message name="consultar_clientesSoapIn">
+    <wsdl:part name="parameters" element="tns:consultar_clientes" />
+  </wsdl:message>
+  <wsdl:message name="consultar_clientesSoapOut">
+    <wsdl:part name="parameters" element="tns:consultar_clientesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceSoap">
+    <wsdl:operation name="registrar_compra">
+      <wsdl:input message="tns:registrar_compraSoapIn" />
+      <wsdl:output message="tns:registrar_compraSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="registrar_pago">
+      <wsdl:input message="tns:registrar_pagoSoapIn" />
+      <wsdl:output message="tns:registrar_pagoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="registrar_cliente">
+      <wsdl:input message="tns:registrar_clienteSoapIn" />
+      <wsdl:output message="tns:registrar_clienteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="registrar_pedido">
+      <wsdl:input message="tns:registrar_pedidoSoapIn" />
+      <wsdl:output message="tns:registrar_pedidoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="cancelar_pedido">
+      <wsdl:input message="tns:cancelar_pedidoSoapIn" />
+      <wsdl:output message="tns:cancelar_pedidoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="consultar_cliente">
+      <wsdl:input message="tns:consultar_clienteSoapIn" />
+      <wsdl:output message="tns:consultar_clienteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="consultar_medicamentos">
+      <wsdl:input message="tns:consultar_medicamentosSoapIn" />
+      <wsdl:output message="tns:consultar_medicamentosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="consultar_farmacias">
+      <wsdl:input message="tns:consultar_farmaciasSoapIn" />
+      <wsdl:output message="tns:consultar_farmaciasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="consultar_clientes">
+      <wsdl:input message="tns:consultar_clientesSoapIn" />
+      <wsdl:output message="tns:consultar_clientesSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceSoap" type="tns:ServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="registrar_compra">
+      <soap:operation soapAction="http://tempuri.org/registrar_compra" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registrar_pago">
+      <soap:operation soapAction="http://tempuri.org/registrar_pago" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registrar_cliente">
+      <soap:operation soapAction="http://tempuri.org/registrar_cliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registrar_pedido">
+      <soap:operation soapAction="http://tempuri.org/registrar_pedido" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelar_pedido">
+      <soap:operation soapAction="http://tempuri.org/cancelar_pedido" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultar_cliente">
+      <soap:operation soapAction="http://tempuri.org/consultar_cliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultar_medicamentos">
+      <soap:operation soapAction="http://tempuri.org/consultar_medicamentos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultar_farmacias">
+      <soap:operation soapAction="http://tempuri.org/consultar_farmacias" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultar_clientes">
+      <soap:operation soapAction="http://tempuri.org/consultar_clientes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceSoap12" type="tns:ServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="registrar_compra">
+      <soap12:operation soapAction="http://tempuri.org/registrar_compra" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registrar_pago">
+      <soap12:operation soapAction="http://tempuri.org/registrar_pago" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registrar_cliente">
+      <soap12:operation soapAction="http://tempuri.org/registrar_cliente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registrar_pedido">
+      <soap12:operation soapAction="http://tempuri.org/registrar_pedido" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelar_pedido">
+      <soap12:operation soapAction="http://tempuri.org/cancelar_pedido" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultar_cliente">
+      <soap12:operation soapAction="http://tempuri.org/consultar_cliente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultar_medicamentos">
+      <soap12:operation soapAction="http://tempuri.org/consultar_medicamentos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultar_farmacias">
+      <soap12:operation soapAction="http://tempuri.org/consultar_farmacias" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultar_clientes">
+      <soap12:operation soapAction="http://tempuri.org/consultar_clientes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="ServiceSoap" binding="tns:ServiceSoap">
+      <soap:address location="http://localhost:30686/Service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceSoap12" binding="tns:ServiceSoap12">
+      <soap12:address location="http://localhost:30686/Service.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

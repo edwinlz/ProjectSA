@@ -120,6 +120,12 @@ fieldset[disabled] .btn-primary.active {
     font-size: 60px;
 }
 
+.logo h2 {
+    font-family: 'Lobster', cursive;
+    color: #fff;
+    font-size: 30px;
+}
+
 .logo span {
     color: #999;
 }
