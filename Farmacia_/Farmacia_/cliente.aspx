@@ -17,8 +17,8 @@
     <link href="css/bootstrap.css" rel="stylesheet" />
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/shop-homepage.css" rel="stylesheet" />
-            <link href="css/style.css" rel="stylesheet"/>
-            <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'/>
+    <link href="css/style.css" rel="stylesheet" />
+    <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css' />
 
 </head>
 <body>
@@ -28,7 +28,7 @@
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <!-- <a class="navbar-brand" href="#">La Vida Futura</a> --> 
+                <!-- <a class="navbar-brand" href="#">La Vida Futura</a> -->
                 <div class="logo text-center">
                     <h2>La Vida Futura</h2>
                 </div>
@@ -54,9 +54,9 @@
 
 
             <div class="col-md-6">
-                
-                <hr/>
-                <h1> Nuevo Cliente </h1>
+
+                <hr />
+                <h1>Nuevo Cliente </h1>
                 <form id="formulario_1" runat="server">
                     <div class="form-group">
                         <label for="nit_cliente">NIT</label>
@@ -67,13 +67,14 @@
                         <asp:TextBox ID="nom_cliente" CssClass="form-control" runat="server" required=""></asp:TextBox>
                     </div>
                     <div class="form-group">
-                        <div><label for="tel_cliente">Telefono</label></div>                     
+                        <div>
+                            <label for="tel_cliente">Telefono</label></div>
                         <asp:TextBox ID="tel_cliente" CssClass="form-control" runat="server" placeholder="Opcional"></asp:TextBox>
                     </div>
                     <div class="form-group">
                         <label for="dir_cliente">Direccion</label>
                         <asp:TextBox ID="dir_cliente" CssClass="form-control" runat="server" placeholder="Opcional"></asp:TextBox>
-                    </div> 
+                    </div>
                     <!--Boton enviar nuevo cliente-->
                     <asp:Button ID="Button1" CssClass="btn btn-success" runat="server" Text="Submit" OnClick="Button1_Click" />
                 </form>
