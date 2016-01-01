@@ -48,7 +48,7 @@
                 <div class="list-group">
                     <a class="list-group-item" href="presencial.aspx"><i class="glyphicon glyphicon-home"></i>&nbsp; Home</a>
                     <a class="list-group-item" href="medicamento.aspx"><i class="glyphicon glyphicon-search"></i>&nbsp; Consultar Medicamento</a>
-                    <a class="list-group-item" href="#"><i class="glyphicon glyphicon-book"></i>&nbsp; Medicamentos</a>
+                    <a class="list-group-item" href="medicamentos.aspx"><i class="glyphicon glyphicon-book"></i>&nbsp; Medicamentos</a>
                 </div>
             </div>
 
@@ -57,16 +57,16 @@
                 <h1>Consultar Medicamento</h1>
                 <form role="form" id="formulario_1" runat="server">
                     <div class="form-group">
+                        <label for="cod_farmacia">Codigo Farmacia</label>
+                        <asp:TextBox ID="cod_farmacia" CssClass="form-control" runat="server" required=""></asp:TextBox>
+                    </div>
+                    <div class="form-group">
                         <label for="cod_medicamento">Codigo Medicamento</label>
                         <asp:TextBox ID="cod_medicamento" CssClass="form-control" runat="server" placeholder="Opcional"></asp:TextBox>
                     </div>
                     <div class="form-group">
                         <label for="nom_comercial">Nombre Comercial</label>
                         <asp:TextBox ID="nom_comercial" CssClass="form-control" runat="server" placeholder="Opcional"></asp:TextBox>
-                    </div>
-                    <div class="form-group">
-                        <label for="nom_generico">Nombre Generico</label>
-                        <asp:TextBox ID="nom_generico" CssClass="form-control" runat="server" placeholder="Opcional"></asp:TextBox>
                     </div>
 
                     <!--Boton enviar nueva consulta-->
@@ -98,6 +98,7 @@
     <!-- jQuery and Bootstrap Core-->
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/boton.js"></script>
 
 </body>
 </html>

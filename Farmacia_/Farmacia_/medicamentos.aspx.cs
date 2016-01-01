@@ -9,56 +9,36 @@ using Farmacia_.Servicio;
 
 namespace Farmacia_
 {
-    public partial class medicamento : System.Web.UI.Page
+    public partial class medicamentos : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            cargar();
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+        private void cargar()
         {
             d.Controls.Clear();
             Servicio.Service1SoapClient wsb = new Servicio.Service1SoapClient();
-            //int codigo = Convert.ToInt32(System.IO.File.ReadAllText("/Farmacia/codigo_tienda.txt"));
-            String texto = "";
-            int codigo = 0;
-            bool result = int.TryParse(cod_farmacia.Text, out codigo); //i now = 108
+            int codigo = Convert.ToInt32(System.IO.File.ReadAllText("/Farmacia/codigo_tienda.txt"));
+            //int codigo = Convert.ToInt32(cod_farmacia.Text);
+            List<ArrayOfString> datos = wsb.consultar_medicamentos(codigo);
 
-            if (result != false)
+            if (datos != null)
             {
-                List<ArrayOfString> datos = wsb.consultar_medicamentos(codigo);
-                if (datos != null)
+                //obtengo datos de web service
+                List<List<String>> lista = datos.ToList().ConvertAll(x => x.ToList());
+                if (lista.Count > 0)
                 {
-                    //obtengo datos de web service
-                    List<List<String>> lista = datos.ToList().ConvertAll(x => x.ToList());
-                    if (lista.Count > 0)
-                    {
-                        //aplico filtros
-                        if (cod_medicamento.Text != "")
-                        {
-                            lista = buscar_codigo(lista, cod_medicamento.Text);
-                        }
-
-                        if (nom_comercial.Text != "")
-                        {
-                            lista = buscar_nombre(lista, nom_comercial.Text);
-                        }
-
-                        //envio resultados
-                        texto = obtener_tabla(lista);
-                        d.Controls.Add(new LiteralControl(texto));
-                    }
-                }
-                else
-                {
-                    texto = "<p>Hubo un error al cargar medicamentos</p>";
+                    //envio resultados
+                    String texto = obtener_tabla(lista);
                     d.Controls.Add(new LiteralControl(texto));
                 }
             }
             else
             {
-                texto = "<p>El codigo de farmacia debe ser un numero</p>";
+
+                String texto = "<p>No se encontro el medicamento</p>";
                 d.Controls.Add(new LiteralControl(texto));
             }
         }

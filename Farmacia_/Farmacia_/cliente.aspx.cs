@@ -17,13 +17,12 @@ namespace Farmacia_
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-
-            ws.ServiceSoapClient wsb = new ws.ServiceSoapClient();
-            int respuesta = wsb.registrar_cliente(Convert.ToInt32(nit_cliente.Text), nom_cliente.Text, tel_cliente.Text, dir_cliente.Text);
+            Servicio.Service1SoapClient wsb = new Servicio.Service1SoapClient();
+            int respuesta = wsb.registrar_cliente(nit_cliente.Text, nom_cliente.Text, ape_cliente.Text,tel_cliente.Text, dir_cliente.Text);
             if (respuesta != -1)
             {
                 limpiar();
-                MessageBox.Show(this, "Se ingreso cliente: "+respuesta);
+                MessageBox.Show(this, "Se ingreso cliente "+respuesta);
             }
             else {
                 MessageBox.Show(this, "Error al ingresar cliente");
@@ -34,6 +33,7 @@ namespace Farmacia_
         private void limpiar() {
             nit_cliente.Text = "";
             nom_cliente.Text = "";
+            ape_cliente.Text = "";
             tel_cliente.Text = "";
             dir_cliente.Text = "";
         }

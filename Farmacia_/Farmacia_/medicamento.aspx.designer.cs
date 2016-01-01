@@ -22,6 +22,15 @@ namespace Farmacia_ {
         protected global::System.Web.UI.HtmlControls.HtmlForm formulario_1;
         
         /// <summary>
+        /// Control cod_farmacia.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox cod_farmacia;
+        
+        /// <summary>
         /// Control cod_medicamento.
         /// </summary>
         /// <remarks>
@@ -38,15 +47,6 @@ namespace Farmacia_ {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox nom_comercial;
-        
-        /// <summary>
-        /// Control nom_generico.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox nom_generico;
         
         /// <summary>
         /// Control Button1.

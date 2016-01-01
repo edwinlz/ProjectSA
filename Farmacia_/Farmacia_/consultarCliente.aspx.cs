@@ -1,4 +1,4 @@
-﻿using Farmacia_.ws;
+﻿using Farmacia_.Servicio;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +17,7 @@ namespace Farmacia_
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            ws.ServiceSoapClient wsb = new ws.ServiceSoapClient();
+            Servicio.Service1SoapClient wsb = new Servicio.Service1SoapClient();
             ArrayOfString datos = wsb.consultar_cliente(nit_cliente.Text);
 
             if (datos != null)

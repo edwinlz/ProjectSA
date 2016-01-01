@@ -40,6 +40,15 @@ namespace Farmacia_ {
         protected global::System.Web.UI.WebControls.TextBox nom_cliente;
         
         /// <summary>
+        /// Control ape_cliente.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox ape_cliente;
+        
+        /// <summary>
         /// Control tel_cliente.
         /// </summary>
         /// <remarks>
