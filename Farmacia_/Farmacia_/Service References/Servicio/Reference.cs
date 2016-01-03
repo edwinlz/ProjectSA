@@ -15,9 +15,315 @@ namespace Farmacia_.Servicio {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.CollectionDataContractAttribute(Name="ArrayOfString", Namespace="http://tempuri.org/", ItemName="string")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="cliente", Namespace="http://tempuri.org/")]
     [System.SerializableAttribute()]
-    public class ArrayOfString : System.Collections.Generic.List<string> {
+    public partial class cliente : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string nitField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string id_clienteField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string nombreField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string apellidoField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string nit {
+            get {
+                return this.nitField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.nitField, value) != true)) {
+                    this.nitField = value;
+                    this.RaisePropertyChanged("nit");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+        public string id_cliente {
+            get {
+                return this.id_clienteField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.id_clienteField, value) != true)) {
+                    this.id_clienteField = value;
+                    this.RaisePropertyChanged("id_cliente");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+        public string nombre {
+            get {
+                return this.nombreField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.nombreField, value) != true)) {
+                    this.nombreField = value;
+                    this.RaisePropertyChanged("nombre");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
+        public string apellido {
+            get {
+                return this.apellidoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.apellidoField, value) != true)) {
+                    this.apellidoField = value;
+                    this.RaisePropertyChanged("apellido");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.CollectionDataContractAttribute(Name="ArrayOfMedicamento", Namespace="http://tempuri.org/", ItemName="medicamento")]
+    [System.SerializableAttribute()]
+    public class ArrayOfMedicamento : System.Collections.Generic.List<Farmacia_.Servicio.medicamento> {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="medicamento", Namespace="http://tempuri.org/")]
+    [System.SerializableAttribute()]
+    public partial class medicamento : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string nombreField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string descripcionField;
+        
+        private int cantidad_disponibleField;
+        
+        private int codigo_medicamentoField;
+        
+        private double precio_unitarioField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string nombre {
+            get {
+                return this.nombreField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.nombreField, value) != true)) {
+                    this.nombreField = value;
+                    this.RaisePropertyChanged("nombre");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+        public string descripcion {
+            get {
+                return this.descripcionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.descripcionField, value) != true)) {
+                    this.descripcionField = value;
+                    this.RaisePropertyChanged("descripcion");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=2)]
+        public int cantidad_disponible {
+            get {
+                return this.cantidad_disponibleField;
+            }
+            set {
+                if ((this.cantidad_disponibleField.Equals(value) != true)) {
+                    this.cantidad_disponibleField = value;
+                    this.RaisePropertyChanged("cantidad_disponible");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=3)]
+        public int codigo_medicamento {
+            get {
+                return this.codigo_medicamentoField;
+            }
+            set {
+                if ((this.codigo_medicamentoField.Equals(value) != true)) {
+                    this.codigo_medicamentoField = value;
+                    this.RaisePropertyChanged("codigo_medicamento");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=4)]
+        public double precio_unitario {
+            get {
+                return this.precio_unitarioField;
+            }
+            set {
+                if ((this.precio_unitarioField.Equals(value) != true)) {
+                    this.precio_unitarioField = value;
+                    this.RaisePropertyChanged("precio_unitario");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.CollectionDataContractAttribute(Name="ArrayOfFarmacia", Namespace="http://tempuri.org/", ItemName="farmacia")]
+    [System.SerializableAttribute()]
+    public class ArrayOfFarmacia : System.Collections.Generic.List<Farmacia_.Servicio.farmacia> {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="farmacia", Namespace="http://tempuri.org/")]
+    [System.SerializableAttribute()]
+    public partial class farmacia : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string codigo_farmaciaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string nombreField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string direccionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string telefonoField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string codigo_farmacia {
+            get {
+                return this.codigo_farmaciaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.codigo_farmaciaField, value) != true)) {
+                    this.codigo_farmaciaField = value;
+                    this.RaisePropertyChanged("codigo_farmacia");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string nombre {
+            get {
+                return this.nombreField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.nombreField, value) != true)) {
+                    this.nombreField = value;
+                    this.RaisePropertyChanged("nombre");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+        public string direccion {
+            get {
+                return this.direccionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.direccionField, value) != true)) {
+                    this.direccionField = value;
+                    this.RaisePropertyChanged("direccion");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
+        public string telefono {
+            get {
+                return this.telefonoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.telefonoField, value) != true)) {
+                    this.telefonoField = value;
+                    this.RaisePropertyChanged("telefono");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.CollectionDataContractAttribute(Name="ArrayOfCliente", Namespace="http://tempuri.org/", ItemName="cliente")]
+    [System.SerializableAttribute()]
+    public class ArrayOfCliente : System.Collections.Generic.List<Farmacia_.Servicio.cliente> {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -86,10 +392,10 @@ namespace Farmacia_.Servicio {
         System.Threading.Tasks.Task<int> registrar_pedidoAsync(int codigo_farmacia, int codigo_compra);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/cancelar_pedido", ReplyAction="*")]
-        bool cancelar_pedido(int codigo_compra);
+        bool cancelar_pedido(int id_compra);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/cancelar_pedido", ReplyAction="*")]
-        System.Threading.Tasks.Task<bool> cancelar_pedidoAsync(int codigo_compra);
+        System.Threading.Tasks.Task<bool> cancelar_pedidoAsync(int id_compra);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -150,12 +456,12 @@ namespace Farmacia_.Servicio {
     public partial class consultar_clienteResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public Farmacia_.Servicio.ArrayOfString consultar_clienteResult;
+        public Farmacia_.Servicio.cliente consultar_clienteResult;
         
         public consultar_clienteResponseBody() {
         }
         
-        public consultar_clienteResponseBody(Farmacia_.Servicio.ArrayOfString consultar_clienteResult) {
+        public consultar_clienteResponseBody(Farmacia_.Servicio.cliente consultar_clienteResult) {
             this.consultar_clienteResult = consultar_clienteResult;
         }
     }
@@ -218,12 +524,12 @@ namespace Farmacia_.Servicio {
     public partial class consultar_medicamentosResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public System.Collections.Generic.List<Farmacia_.Servicio.ArrayOfString> consultar_medicamentosResult;
+        public Farmacia_.Servicio.ArrayOfMedicamento consultar_medicamentosResult;
         
         public consultar_medicamentosResponseBody() {
         }
         
-        public consultar_medicamentosResponseBody(System.Collections.Generic.List<Farmacia_.Servicio.ArrayOfString> consultar_medicamentosResult) {
+        public consultar_medicamentosResponseBody(Farmacia_.Servicio.ArrayOfMedicamento consultar_medicamentosResult) {
             this.consultar_medicamentosResult = consultar_medicamentosResult;
         }
     }
@@ -279,12 +585,12 @@ namespace Farmacia_.Servicio {
     public partial class consultar_farmaciasResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public System.Collections.Generic.List<Farmacia_.Servicio.ArrayOfString> consultar_farmaciasResult;
+        public Farmacia_.Servicio.ArrayOfFarmacia consultar_farmaciasResult;
         
         public consultar_farmaciasResponseBody() {
         }
         
-        public consultar_farmaciasResponseBody(System.Collections.Generic.List<Farmacia_.Servicio.ArrayOfString> consultar_farmaciasResult) {
+        public consultar_farmaciasResponseBody(Farmacia_.Servicio.ArrayOfFarmacia consultar_farmaciasResult) {
             this.consultar_farmaciasResult = consultar_farmaciasResult;
         }
     }
@@ -340,12 +646,12 @@ namespace Farmacia_.Servicio {
     public partial class consultar_clientesResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public System.Collections.Generic.List<Farmacia_.Servicio.ArrayOfString> consultar_clientesResult;
+        public Farmacia_.Servicio.ArrayOfCliente consultar_clientesResult;
         
         public consultar_clientesResponseBody() {
         }
         
-        public consultar_clientesResponseBody(System.Collections.Generic.List<Farmacia_.Servicio.ArrayOfString> consultar_clientesResult) {
+        public consultar_clientesResponseBody(Farmacia_.Servicio.ArrayOfCliente consultar_clientesResult) {
             this.consultar_clientesResult = consultar_clientesResult;
         }
     }
@@ -385,18 +691,14 @@ namespace Farmacia_.Servicio {
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
         public Farmacia_.Servicio.ArrayOfInt unidades_productos;
         
-        [System.Runtime.Serialization.DataMemberAttribute(Order=4)]
-        public int tipo_pago;
-        
         public registrar_compraRequestBody() {
         }
         
-        public registrar_compraRequestBody(int codigo_tienda, int codigo_cliente, Farmacia_.Servicio.ArrayOfInt codigo_productos, Farmacia_.Servicio.ArrayOfInt unidades_productos, int tipo_pago) {
+        public registrar_compraRequestBody(int codigo_tienda, int codigo_cliente, Farmacia_.Servicio.ArrayOfInt codigo_productos, Farmacia_.Servicio.ArrayOfInt unidades_productos) {
             this.codigo_tienda = codigo_tienda;
             this.codigo_cliente = codigo_cliente;
             this.codigo_productos = codigo_productos;
             this.unidades_productos = unidades_productos;
-            this.tipo_pago = tipo_pago;
         }
     }
     
@@ -550,7 +852,7 @@ namespace Farmacia_.Servicio {
             return base.Channel.consultar_cliente(request);
         }
         
-        public Farmacia_.Servicio.ArrayOfString consultar_cliente(string nit) {
+        public Farmacia_.Servicio.cliente consultar_cliente(string nit) {
             Farmacia_.Servicio.consultar_clienteRequest inValue = new Farmacia_.Servicio.consultar_clienteRequest();
             inValue.Body = new Farmacia_.Servicio.consultar_clienteRequestBody();
             inValue.Body.nit = nit;
@@ -575,7 +877,7 @@ namespace Farmacia_.Servicio {
             return base.Channel.consultar_medicamentos(request);
         }
         
-        public System.Collections.Generic.List<Farmacia_.Servicio.ArrayOfString> consultar_medicamentos(int codigo_farmacia) {
+        public Farmacia_.Servicio.ArrayOfMedicamento consultar_medicamentos(int codigo_farmacia) {
             Farmacia_.Servicio.consultar_medicamentosRequest inValue = new Farmacia_.Servicio.consultar_medicamentosRequest();
             inValue.Body = new Farmacia_.Servicio.consultar_medicamentosRequestBody();
             inValue.Body.codigo_farmacia = codigo_farmacia;
@@ -600,7 +902,7 @@ namespace Farmacia_.Servicio {
             return base.Channel.consultar_farmacias(request);
         }
         
-        public System.Collections.Generic.List<Farmacia_.Servicio.ArrayOfString> consultar_farmacias() {
+        public Farmacia_.Servicio.ArrayOfFarmacia consultar_farmacias() {
             Farmacia_.Servicio.consultar_farmaciasRequest inValue = new Farmacia_.Servicio.consultar_farmaciasRequest();
             inValue.Body = new Farmacia_.Servicio.consultar_farmaciasRequestBody();
             Farmacia_.Servicio.consultar_farmaciasResponse retVal = ((Farmacia_.Servicio.Service1Soap)(this)).consultar_farmacias(inValue);
@@ -623,7 +925,7 @@ namespace Farmacia_.Servicio {
             return base.Channel.consultar_clientes(request);
         }
         
-        public System.Collections.Generic.List<Farmacia_.Servicio.ArrayOfString> consultar_clientes() {
+        public Farmacia_.Servicio.ArrayOfCliente consultar_clientes() {
             Farmacia_.Servicio.consultar_clientesRequest inValue = new Farmacia_.Servicio.consultar_clientesRequest();
             inValue.Body = new Farmacia_.Servicio.consultar_clientesRequestBody();
             Farmacia_.Servicio.consultar_clientesResponse retVal = ((Farmacia_.Servicio.Service1Soap)(this)).consultar_clientes(inValue);
@@ -646,14 +948,13 @@ namespace Farmacia_.Servicio {
             return base.Channel.registrar_compra(request);
         }
         
-        public Farmacia_.Servicio.ArrayOfInt registrar_compra(int codigo_tienda, int codigo_cliente, Farmacia_.Servicio.ArrayOfInt codigo_productos, Farmacia_.Servicio.ArrayOfInt unidades_productos, int tipo_pago) {
+        public Farmacia_.Servicio.ArrayOfInt registrar_compra(int codigo_tienda, int codigo_cliente, Farmacia_.Servicio.ArrayOfInt codigo_productos, Farmacia_.Servicio.ArrayOfInt unidades_productos) {
             Farmacia_.Servicio.registrar_compraRequest inValue = new Farmacia_.Servicio.registrar_compraRequest();
             inValue.Body = new Farmacia_.Servicio.registrar_compraRequestBody();
             inValue.Body.codigo_tienda = codigo_tienda;
             inValue.Body.codigo_cliente = codigo_cliente;
             inValue.Body.codigo_productos = codigo_productos;
             inValue.Body.unidades_productos = unidades_productos;
-            inValue.Body.tipo_pago = tipo_pago;
             Farmacia_.Servicio.registrar_compraResponse retVal = ((Farmacia_.Servicio.Service1Soap)(this)).registrar_compra(inValue);
             return retVal.Body.registrar_compraResult;
         }
@@ -663,14 +964,13 @@ namespace Farmacia_.Servicio {
             return base.Channel.registrar_compraAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Farmacia_.Servicio.registrar_compraResponse> registrar_compraAsync(int codigo_tienda, int codigo_cliente, Farmacia_.Servicio.ArrayOfInt codigo_productos, Farmacia_.Servicio.ArrayOfInt unidades_productos, int tipo_pago) {
+        public System.Threading.Tasks.Task<Farmacia_.Servicio.registrar_compraResponse> registrar_compraAsync(int codigo_tienda, int codigo_cliente, Farmacia_.Servicio.ArrayOfInt codigo_productos, Farmacia_.Servicio.ArrayOfInt unidades_productos) {
             Farmacia_.Servicio.registrar_compraRequest inValue = new Farmacia_.Servicio.registrar_compraRequest();
             inValue.Body = new Farmacia_.Servicio.registrar_compraRequestBody();
             inValue.Body.codigo_tienda = codigo_tienda;
             inValue.Body.codigo_cliente = codigo_cliente;
             inValue.Body.codigo_productos = codigo_productos;
             inValue.Body.unidades_productos = unidades_productos;
-            inValue.Body.tipo_pago = tipo_pago;
             return ((Farmacia_.Servicio.Service1Soap)(this)).registrar_compraAsync(inValue);
         }
         
@@ -723,12 +1023,12 @@ namespace Farmacia_.Servicio {
             return base.Channel.registrar_pedidoAsync(codigo_farmacia, codigo_compra);
         }
         
-        public bool cancelar_pedido(int codigo_compra) {
-            return base.Channel.cancelar_pedido(codigo_compra);
+        public bool cancelar_pedido(int id_compra) {
+            return base.Channel.cancelar_pedido(id_compra);
         }
         
-        public System.Threading.Tasks.Task<bool> cancelar_pedidoAsync(int codigo_compra) {
-            return base.Channel.cancelar_pedidoAsync(codigo_compra);
+        public System.Threading.Tasks.Task<bool> cancelar_pedidoAsync(int id_compra) {
+            return base.Channel.cancelar_pedidoAsync(id_compra);
         }
     }
 }

@@ -18,22 +18,20 @@ namespace Farmacia_
         protected void Button1_Click(object sender, EventArgs e)
         {
             Servicio.Service1SoapClient wsb = new Servicio.Service1SoapClient();
-            ArrayOfString datos = wsb.consultar_cliente(nit_cliente.Text);
+            Servicio.cliente lista = wsb.consultar_cliente(nit_cliente.Text);
 
-            if (datos != null)
+            if (!String.IsNullOrEmpty(lista.id_cliente))
             {
-                List<String> lista = datos.ToList();
-                String texto = "<table class=\"table table-bordered\">" +
-               "<thead><tr><th>Codigo</th><th>Nombre</th><th>Direccion</th></tr></thead>" +
-               "<tbody><tr>" +
-               "<td>" + lista[0] + "</td><td>" + lista[1] + "</td><td>" + lista[2] + "</td>" +
-               "</tr></tbody></table>";
-                d.Controls.Add(new LiteralControl(texto));
-
+                    String texto = "<table class=\"table table-bordered\">" +
+                               "<thead><tr><th>Codigo</th><th>Nombre</th><th>Apellido</th></tr></thead>" +
+                               "<tbody><tr>" +
+                               "<td>" + lista.id_cliente + "</td><td>" + lista.nombre + "</td><td>" + lista.apellido + "</td>" +
+                               "</tr></tbody></table>";
+                    d.Controls.Add(new LiteralControl(texto));
             }
             else
             {
-                MessageBox.Show(this, "Error: Hubo un problema al recuperar cliente");
+                d.Controls.Add(new LiteralControl("<p>Ocurrio un error al recuperar cliente<p>"));
             }
         }
     }

@@ -145,18 +145,10 @@
                         <div id="div_mostrar2" runat="server">
                         </div>
                     </div>
-                    <!-- Tipo de pago-->
-
-                    <div class="form-group">
-                        <label for="cod_cliente">Tipo de pago</label>
-                        <asp:RadioButtonList ID="rbtLstRating" runat="server" RepeatDirection="Vertical" RepeatLayout="Table">
-                            <asp:ListItem Selected="True" Text="Efectivo" Value="1"></asp:ListItem>
-                            <asp:ListItem Text="Tarjeta" Value="2"></asp:ListItem>
-                        </asp:RadioButtonList>
-                    </div>
+                    <!-- Accion de botones -->
                     <asp:Button ID="Button3" CssClass="btn btn-success" runat="server" Text="Submit" OnClick="Button3_Click" />
                     <asp:Button ID="Button4" CssClass="btn btn-danger" runat="server" Text="Cancelar" OnClick="Button4_Click" />
-                </form>
+                </form> 
 
 
 

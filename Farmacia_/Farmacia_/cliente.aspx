@@ -54,7 +54,7 @@
 
 
             <div class="col-md-6">
-
+                <div id="div_mensajes" runat="server"></div>
                 <hr />
                 <h1>Nuevo Cliente </h1>
                 <form id="formulario_1" runat="server">

@@ -12,13 +12,16 @@
       <s:element name="consultar_clienteResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="consultar_clienteResult" type="tns:ArrayOfString" />
+            <s:element minOccurs="1" maxOccurs="1" name="consultar_clienteResult" type="tns:cliente" />
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:complexType name="ArrayOfString">
+      <s:complexType name="cliente">
         <s:sequence>
-          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="nit" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="id_cliente" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="apellido" type="s:string" />
         </s:sequence>
       </s:complexType>
       <s:element name="consultar_medicamentos">
@@ -31,13 +34,22 @@
       <s:element name="consultar_medicamentosResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="consultar_medicamentosResult" type="tns:ArrayOfArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="consultar_medicamentosResult" type="tns:ArrayOfMedicamento" />
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:complexType name="ArrayOfArrayOfString">
+      <s:complexType name="ArrayOfMedicamento">
         <s:sequence>
-          <s:element minOccurs="0" maxOccurs="unbounded" name="ArrayOfString" nillable="true" type="tns:ArrayOfString" />
+          <s:element minOccurs="0" maxOccurs="unbounded" name="medicamento" type="tns:medicamento" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="medicamento">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="descripcion" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="cantidad_disponible" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="codigo_medicamento" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="precio_unitario" type="s:double" />
         </s:sequence>
       </s:complexType>
       <s:element name="consultar_farmacias">
@@ -46,20 +58,38 @@
       <s:element name="consultar_farmaciasResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="consultar_farmaciasResult" type="tns:ArrayOfArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="consultar_farmaciasResult" type="tns:ArrayOfFarmacia" />
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:complexType name="ArrayOfFarmacia">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="farmacia" type="tns:farmacia" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="farmacia">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="codigo_farmacia" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="direccion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="telefono" type="s:string" />
+        </s:sequence>
+      </s:complexType>
       <s:element name="consultar_clientes">
         <s:complexType />
       </s:element>
       <s:element name="consultar_clientesResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="consultar_clientesResult" type="tns:ArrayOfArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="consultar_clientesResult" type="tns:ArrayOfCliente" />
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:complexType name="ArrayOfCliente">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="cliente" type="tns:cliente" />
+        </s:sequence>
+      </s:complexType>
       <s:element name="registrar_compra">
         <s:complexType>
           <s:sequence>
@@ -67,7 +97,6 @@
             <s:element minOccurs="1" maxOccurs="1" name="codigo_cliente" type="s:int" />
             <s:element minOccurs="0" maxOccurs="1" name="codigo_productos" type="tns:ArrayOfInt" />
             <s:element minOccurs="0" maxOccurs="1" name="unidades_productos" type="tns:ArrayOfInt" />
-            <s:element minOccurs="1" maxOccurs="1" name="tipo_pago" type="s:int" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -134,7 +163,7 @@
       <s:element name="cancelar_pedido">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="codigo_compra" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="id_compra" type="s:int" />
           </s:sequence>
         </s:complexType>
       </s:element>

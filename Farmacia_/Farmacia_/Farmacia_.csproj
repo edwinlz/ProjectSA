@@ -90,9 +90,6 @@
     <Content Include="Service References\Servicio\Farmacia_.Servicio.ArrayOfInt.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Service References\Servicio\Farmacia_.Servicio.ArrayOfString.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
     <Content Include="Service References\Servicio\Farmacia_.Servicio.consultar_clienteResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -113,6 +110,18 @@
     </Content>
     <None Include="Service References\Servicio\configuration91.svcinfo" />
     <None Include="Service References\Servicio\configuration.svcinfo" />
+    <Content Include="Service References\Servicio\Farmacia_.Servicio.ArrayOfCliente.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Servicio\Farmacia_.Servicio.ArrayOfFarmacia.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Servicio\Farmacia_.Servicio.ArrayOfMedicamento.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Servicio\Farmacia_.Servicio.cliente.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Service References\Servicio\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>

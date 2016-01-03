@@ -103,15 +103,6 @@ namespace Farmacia_ {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl div_mostrar2;
         
         /// <summary>
-        /// Control rbtLstRating.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList rbtLstRating;
-        
-        /// <summary>
         /// Control Button3.
         /// </summary>
         /// <remarks>

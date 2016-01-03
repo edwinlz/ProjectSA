@@ -1,5 +1,4 @@
-﻿//using Farmacia_.ws;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -16,44 +15,51 @@ namespace Farmacia_
             cargar();
         }
 
+        //Carga la lista de medicamentos
         private void cargar()
         {
             d.Controls.Clear();
             Servicio.Service1SoapClient wsb = new Servicio.Service1SoapClient();
             int codigo = Convert.ToInt32(System.IO.File.ReadAllText("/Farmacia/codigo_tienda.txt"));
-            //int codigo = Convert.ToInt32(cod_farmacia.Text);
-            List<ArrayOfString> datos = wsb.consultar_medicamentos(codigo);
+            Servicio.ArrayOfMedicamento datos = wsb.consultar_medicamentos(codigo);
 
             if (datos != null)
             {
                 //obtengo datos de web service
-                List<List<String>> lista = datos.ToList().ConvertAll(x => x.ToList());
+                List<Servicio.medicamento> lista = datos.ToList();
                 if (lista.Count > 0)
                 {
                     //envio resultados
-                    String texto = obtener_tabla(lista);
-                    d.Controls.Add(new LiteralControl(texto));
+                    String texto = getTablaMedicamentos(lista);
+                    mostrar(texto);
+                }
+                else {
+
+                    mostrar("<p>No hay medicamentos disponibles</p>");
                 }
             }
             else
             {
-
-                String texto = "<p>No se encontro el medicamento</p>";
-                d.Controls.Add(new LiteralControl(texto));
+                mostrar("<p>No hay medicamentos disponibles</p>");               
             }
         }
 
-        public String obtener_tabla(List<List<String>> lista)
+        private void mostrar(String texto) {
+            d.Controls.Add(new LiteralControl(texto));
+        }
+
+        //Devuelve cadena de la tabla en formato HTML para la lista de medicamentos
+        public String getTablaMedicamentos(List<Servicio.medicamento> lista)
         {
             String texto = "";
             if (lista.Count > 0)
             {
                 texto = "<table class=\"table table-bordered\">" +
-                                "<thead><tr><th>Codigo</th><th>Nombre</th><th>Descripcion</th><th>Unidades</th></thead>" +
+                                "<thead><tr><th>Codigo</th><th>Nombre</th><th>Descripcion</th><th>Precio unitario</th><th>Unidades</th></thead>" +
                                 "<tbody>";
                 for (int i = 0; i < lista.Count; i++)
                 {
-                    texto += "<tr><td>" + lista[i].ElementAt(3) + "</td><td>" + lista[i].ElementAt(0) + "</td><td>" + lista[i].ElementAt(1) + "</td><td><span class=\"badge\">" + lista[i].ElementAt(2) + "</span></td></tr>";
+                    texto += "<tr><td>" + lista[i].codigo_medicamento + "</td><td>" + lista[i].nombre + "</td><td>" + lista[i].descripcion +"</td><td>" + lista[i].cantidad_disponible + "</td><td><span class=\"badge\">" + lista[i].cantidad_disponible + "</span></td></tr>";
                 }
                 texto += "</tbody></table>";
             }
@@ -62,32 +68,6 @@ namespace Farmacia_
                 texto = "<p>No se encontro el medicamento</p>";
             }
             return texto;
-        }
-
-        public List<List<String>> buscar_codigo(List<List<String>> lista, String codigo)
-        {
-            List<List<String>> respuesta = new List<List<String>>();
-            for (int t = 0; t < lista.Count; t++)
-            {
-                if (lista[t].ElementAt(3).Equals(codigo))
-                {
-                    respuesta.Add(lista[t]);
-                }
-            }
-            return respuesta;
-        }
-
-        public List<List<String>> buscar_nombre(List<List<String>> lista, String nombre)
-        {
-            List<List<String>> respuesta = new List<List<String>>();
-            for (int t = 0; t < lista.Count; t++)
-            {
-                if (lista[t].ElementAt(0).Contains(nombre))
-                {
-                    respuesta.Add(lista[t]);
-                }
-            }
-            return respuesta;
         }
     }
 }

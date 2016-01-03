@@ -27,11 +27,11 @@ namespace Farmacia_
 
             if (result != false)
             {
-                List<ArrayOfString> datos = wsb.consultar_medicamentos(codigo);
+                Servicio.ArrayOfMedicamento datos = wsb.consultar_medicamentos(codigo);
                 if (datos != null)
                 {
                     //obtengo datos de web service
-                    List<List<String>> lista = datos.ToList().ConvertAll(x => x.ToList());
+                    List<Servicio.medicamento> lista = datos.ToList();
                     if (lista.Count > 0)
                     {
                         //aplico filtros
@@ -63,17 +63,17 @@ namespace Farmacia_
             }
         }
 
-        public String obtener_tabla(List<List<String>> lista)
+        public String obtener_tabla(List<Servicio.medicamento> lista)
         {
             String texto = "";
             if (lista.Count > 0)
             {
                 texto = "<table class=\"table table-bordered\">" +
-                                "<thead><tr><th>Codigo</th><th>Nombre</th><th>Descripcion</th><th>Unidades</th></thead>" +
+                                "<thead><tr><th>Codigo</th><th>Nombre</th><th>Descripcion</th><th>Precio unitario</th><th>Unidades</th></thead>" +
                                 "<tbody>";
                 for (int i = 0; i < lista.Count; i++)
                 {
-                    texto += "<tr><td>" + lista[i].ElementAt(3) + "</td><td>" + lista[i].ElementAt(0) + "</td><td>" + lista[i].ElementAt(1) + "</td><td><span class=\"badge\">" + lista[i].ElementAt(2) + "</span></td></tr>";
+                    texto += "<tr><td>" + lista[i].codigo_medicamento + "</td><td>" + lista[i].nombre + "</td><td>" + lista[i].descripcion + "</td><td>" + lista[i].precio_unitario + "</td><td><span class=\"badge\">" + lista[i].cantidad_disponible + "</span></td></tr>";
                 }
                 texto += "</tbody></table>";
             }
@@ -84,12 +84,12 @@ namespace Farmacia_
             return texto;
         }
 
-        public List<List<String>> buscar_codigo(List<List<String>> lista, String codigo)
+        public List<Servicio.medicamento> buscar_codigo(List<Servicio.medicamento> lista, String codigo)
         {
-            List<List<String>> respuesta = new List<List<String>>();
+            List<Servicio.medicamento> respuesta = new List<Servicio.medicamento>();
             for (int t = 0; t < lista.Count; t++)
             {
-                if (lista[t].ElementAt(3).Equals(codigo))
+                if (lista[t].codigo_medicamento.Equals(codigo))
                 {
                     respuesta.Add(lista[t]);
                 }
@@ -97,12 +97,12 @@ namespace Farmacia_
             return respuesta;
         }
 
-        public List<List<String>> buscar_nombre(List<List<String>> lista, String nombre)
+        public List<Servicio.medicamento> buscar_nombre(List<Servicio.medicamento> lista, String nombre)
         {
-            List<List<String>> respuesta = new List<List<String>>();
+            List<Servicio.medicamento> respuesta = new List<Servicio.medicamento>();
             for (int t = 0; t < lista.Count; t++)
             {
-                if (lista[t].ElementAt(0).Contains(nombre))
+                if (lista[t].nombre.Contains(nombre))
                 {
                     respuesta.Add(lista[t]);
                 }

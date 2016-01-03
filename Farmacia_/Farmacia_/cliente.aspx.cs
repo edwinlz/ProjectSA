@@ -22,10 +22,10 @@ namespace Farmacia_
             if (respuesta != -1)
             {
                 limpiar();
-                MessageBox.Show(this, "Se ingreso cliente "+respuesta);
+                mostrar_sucess("El cliente ha sido registrado exitosamente <strong>"+respuesta+"</strong>");
             }
             else {
-                MessageBox.Show(this, "Error al ingresar cliente");
+                mostrar_error("Hubo un error al ingresar al cliente");
             }
             
         }
@@ -36,6 +36,28 @@ namespace Farmacia_
             ape_cliente.Text = "";
             tel_cliente.Text = "";
             dir_cliente.Text = "";
+        }
+
+        private void mostrar_sucess(String mensaje)
+        {
+
+            String texto = "<div class=\"alert alert-success\">"
+                    + "<a href=\"#\" class=\"close\" data-dismiss=\"alert\" aria-label=\"close\">&times;</a>"
+                    + "<strong>Correcto!</strong> " + mensaje
+                    + "</div>";
+            div_mensajes.Controls.Add(new LiteralControl(texto));
+
+        }
+
+        private void mostrar_error(String mensaje)
+        {
+
+            String texto = "<div class=\"alert alert-danger\">"
+                    + "<a href=\"#\" class=\"close\" data-dismiss=\"alert\" aria-label=\"close\">&times;</a>"
+                    + "<strong>Incorrecto!</strong> " + mensaje
+                    + "</div>";
+            div_mensajes.Controls.Add(new LiteralControl(texto));
+
         }
 
 
