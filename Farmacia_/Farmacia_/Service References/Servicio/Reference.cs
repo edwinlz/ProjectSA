@@ -386,12 +386,12 @@ namespace Farmacia_.Servicio {
         public Farmacia_.Servicio.ArrayOfInt unidades_productos;
         
         [System.Runtime.Serialization.DataMemberAttribute(Order=4)]
-        public char tipo_pago;
+        public int tipo_pago;
         
         public registrar_compraRequestBody() {
         }
         
-        public registrar_compraRequestBody(int codigo_tienda, int codigo_cliente, Farmacia_.Servicio.ArrayOfInt codigo_productos, Farmacia_.Servicio.ArrayOfInt unidades_productos, char tipo_pago) {
+        public registrar_compraRequestBody(int codigo_tienda, int codigo_cliente, Farmacia_.Servicio.ArrayOfInt codigo_productos, Farmacia_.Servicio.ArrayOfInt unidades_productos, int tipo_pago) {
             this.codigo_tienda = codigo_tienda;
             this.codigo_cliente = codigo_cliente;
             this.codigo_productos = codigo_productos;
@@ -646,7 +646,7 @@ namespace Farmacia_.Servicio {
             return base.Channel.registrar_compra(request);
         }
         
-        public Farmacia_.Servicio.ArrayOfInt registrar_compra(int codigo_tienda, int codigo_cliente, Farmacia_.Servicio.ArrayOfInt codigo_productos, Farmacia_.Servicio.ArrayOfInt unidades_productos, char tipo_pago) {
+        public Farmacia_.Servicio.ArrayOfInt registrar_compra(int codigo_tienda, int codigo_cliente, Farmacia_.Servicio.ArrayOfInt codigo_productos, Farmacia_.Servicio.ArrayOfInt unidades_productos, int tipo_pago) {
             Farmacia_.Servicio.registrar_compraRequest inValue = new Farmacia_.Servicio.registrar_compraRequest();
             inValue.Body = new Farmacia_.Servicio.registrar_compraRequestBody();
             inValue.Body.codigo_tienda = codigo_tienda;
@@ -663,7 +663,7 @@ namespace Farmacia_.Servicio {
             return base.Channel.registrar_compraAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Farmacia_.Servicio.registrar_compraResponse> registrar_compraAsync(int codigo_tienda, int codigo_cliente, Farmacia_.Servicio.ArrayOfInt codigo_productos, Farmacia_.Servicio.ArrayOfInt unidades_productos, char tipo_pago) {
+        public System.Threading.Tasks.Task<Farmacia_.Servicio.registrar_compraResponse> registrar_compraAsync(int codigo_tienda, int codigo_cliente, Farmacia_.Servicio.ArrayOfInt codigo_productos, Farmacia_.Servicio.ArrayOfInt unidades_productos, int tipo_pago) {
             Farmacia_.Servicio.registrar_compraRequest inValue = new Farmacia_.Servicio.registrar_compraRequest();
             inValue.Body = new Farmacia_.Servicio.registrar_compraRequestBody();
             inValue.Body.codigo_tienda = codigo_tienda;

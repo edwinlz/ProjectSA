@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
   <wsdl:types>
     <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
-      <s:import namespace="http://microsoft.com/wsdl/types/" />
       <s:element name="consultar_cliente">
         <s:complexType>
           <s:sequence>
@@ -68,7 +67,7 @@
             <s:element minOccurs="1" maxOccurs="1" name="codigo_cliente" type="s:int" />
             <s:element minOccurs="0" maxOccurs="1" name="codigo_productos" type="tns:ArrayOfInt" />
             <s:element minOccurs="0" maxOccurs="1" name="unidades_productos" type="tns:ArrayOfInt" />
-            <s:element minOccurs="1" maxOccurs="1" name="tipo_pago" type="s1:char" />
+            <s:element minOccurs="1" maxOccurs="1" name="tipo_pago" type="s:int" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -147,11 +146,6 @@
           </s:sequence>
         </s:complexType>
       </s:element>
-    </s:schema>
-    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
-      <s:simpleType name="char">
-        <s:restriction base="s:unsignedShort" />
-      </s:simpleType>
     </s:schema>
   </wsdl:types>
   <wsdl:message name="consultar_clienteSoapIn">

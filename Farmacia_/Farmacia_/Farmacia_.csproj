@@ -63,6 +63,7 @@
     <Content Include="compra.aspx" />
     <Content Include="cliente.aspx" />
     <Content Include="consultarCliente.aspx" />
+    <Content Include="js\jquery-2.1.1.min.js" />
     <Content Include="medicamentos.aspx" />
     <Content Include="js\boton.js" />
     <Content Include="medicamento.aspx" />
@@ -208,7 +209,7 @@
     <Content Include="fonts\fontawesome-webfont.ttf" />
     <Content Include="fonts\fontawesome-webfont.woff" />
     <Content Include="fonts\FontAwesome.otf" />
-    <Content Include="Service References\Servicio\Service11.wsdl" />
+    <None Include="Service References\Servicio\Service11.wsdl" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
