@@ -46,8 +46,18 @@ namespace Farmacia_
                         }
 
                         //envio resultados
-                        texto = obtener_tabla(lista);
-                        d.Controls.Add(new LiteralControl(texto));
+                        if (lista.Count > 0)
+                        {
+                            texto = obtener_tabla(lista);
+                            d.Controls.Add(new LiteralControl(texto));
+                        }
+                        else {
+                            d.Controls.Add(new LiteralControl("<p>El medicamento indicado no existe<p>"));
+                        }
+
+                    }
+                    else {
+                        d.Controls.Add(new LiteralControl("<p>No hay medicamentos disponibles<p>"));
                     }
                 }
                 else
