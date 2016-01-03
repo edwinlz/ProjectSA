@@ -63,6 +63,7 @@
     <Content Include="compra.aspx" />
     <Content Include="cliente.aspx" />
     <Content Include="consultarCliente.aspx" />
+    <Content Include="configuracion.aspx" />
     <Content Include="js\jquery-2.1.1.min.js" />
     <Content Include="medicamentos.aspx" />
     <Content Include="js\boton.js" />
@@ -146,6 +147,13 @@
     </Compile>
     <Compile Include="consultarCliente.aspx.designer.cs">
       <DependentUpon>consultarCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="configuracion.aspx.cs">
+      <DependentUpon>configuracion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="configuracion.aspx.designer.cs">
+      <DependentUpon>configuracion.aspx</DependentUpon>
     </Compile>
     <Compile Include="medicamentos.aspx.cs">
       <DependentUpon>medicamentos.aspx</DependentUpon>

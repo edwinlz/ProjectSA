@@ -74,17 +74,17 @@
                     
                     <div class="col-md-4">
                         
-                        <div class="menu-item light-red">
+                        <div class="menu-item light-orange">
                             <a href="pago.aspx" data-toggle="modal">
                                 <i class="fa fa-money"></i>
                                 <p>Pagos</p>
                             </a>
                         </div>
                         
-                        <div class="menu-item color">
-                            <a href="about.aspx" data-toggle="modal">
-                                <i class="fa fa-comment-o"></i>
-                                <p>About</p>
+                        <div class="menu-item blue">
+                            <a href="configuracion.aspx" data-toggle="modal">
+                                <i class="fa fa-cog fa-fw"></i>
+                                <p>Configuracion</p>
                             </a>
                         </div>
                         
