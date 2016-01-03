@@ -5,13 +5,12 @@ Condicion actual
 
 - Hay un menu inicial de eleccion de opciones
 
-Formularios disponibles:
-
-- Compra
+Formularios faltantes (FASE 2)
 - Pago
-- Nuevo cliente
-- Consultar cliente
-- Consultar Medicamento
 
 Formularios terminados:
 - Nuevo cliente
+- Consultar cliente
+- Consultar medicamentos
+- Medicamentos en farmacia
+- Nueva compra
