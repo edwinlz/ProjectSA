@@ -86,9 +86,8 @@
       <s:element name="registrar_pago">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="codigo_farmacia" type="s:int" />
-            <s:element minOccurs="1" maxOccurs="1" name="codigo_cliente" type="s:int" />
             <s:element minOccurs="1" maxOccurs="1" name="codigo_compra" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="tipo_pago" type="s:int" />
           </s:sequence>
         </s:complexType>
       </s:element>

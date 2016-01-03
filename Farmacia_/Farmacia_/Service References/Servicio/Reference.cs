@@ -67,10 +67,10 @@ namespace Farmacia_.Servicio {
         System.Threading.Tasks.Task<Farmacia_.Servicio.registrar_compraResponse> registrar_compraAsync(Farmacia_.Servicio.registrar_compraRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/registrar_pago", ReplyAction="*")]
-        int registrar_pago(int codigo_farmacia, int codigo_cliente, int codigo_compra);
+        int registrar_pago(int codigo_compra, int tipo_pago);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/registrar_pago", ReplyAction="*")]
-        System.Threading.Tasks.Task<int> registrar_pagoAsync(int codigo_farmacia, int codigo_cliente, int codigo_compra);
+        System.Threading.Tasks.Task<int> registrar_pagoAsync(int codigo_compra, int tipo_pago);
         
         // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento nit del espacio de nombres http://tempuri.org/ no está marcado para aceptar valores nil.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/registrar_cliente", ReplyAction="*")]
@@ -674,12 +674,12 @@ namespace Farmacia_.Servicio {
             return ((Farmacia_.Servicio.Service1Soap)(this)).registrar_compraAsync(inValue);
         }
         
-        public int registrar_pago(int codigo_farmacia, int codigo_cliente, int codigo_compra) {
-            return base.Channel.registrar_pago(codigo_farmacia, codigo_cliente, codigo_compra);
+        public int registrar_pago(int codigo_compra, int tipo_pago) {
+            return base.Channel.registrar_pago(codigo_compra, tipo_pago);
         }
         
-        public System.Threading.Tasks.Task<int> registrar_pagoAsync(int codigo_farmacia, int codigo_cliente, int codigo_compra) {
-            return base.Channel.registrar_pagoAsync(codigo_farmacia, codigo_cliente, codigo_compra);
+        public System.Threading.Tasks.Task<int> registrar_pagoAsync(int codigo_compra, int tipo_pago) {
+            return base.Channel.registrar_pagoAsync(codigo_compra, tipo_pago);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
