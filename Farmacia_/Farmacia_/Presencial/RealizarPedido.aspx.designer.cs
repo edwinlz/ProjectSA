@@ -10,7 +10,7 @@
 namespace Farmacia_.Presencial {
     
     
-    public partial class pedido {
+    public partial class RealizarPedido {
         
         /// <summary>
         /// div_mensajes control.
@@ -38,6 +38,15 @@ namespace Farmacia_.Presencial {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox id_farmacia;
+        
+        /// <summary>
+        /// id_compra control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox id_compra;
         
         /// <summary>
         /// Button1 control.

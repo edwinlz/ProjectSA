@@ -1,5 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SitePresencial.Master" AutoEventWireup="true" CodeBehind="pedido.aspx.cs" Inherits="Farmacia_.Presencial.pedido" %>
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SitePresencial.Master" AutoEventWireup="true" CodeBehind="RealizarPedido.aspx.cs" Inherits="Farmacia_.Presencial.RealizarPedido" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -14,15 +13,18 @@
                 <a class="list-group-item" href="RealizarPedido.aspx"><i class="glyphicon glyphicon-book"></i>&nbsp;Asignar pedido</a>
             </div>
         </div>
-
         <div class="col-md-6">
             <div id="div_mensajes" runat="server"></div>
             <hr />
-            <h1>Consultar Pedido </h1>
+            <h1>Realizar Pedido </h1>
             <form id="formulario_1" runat="server">
                 <div class="form-group">
-                    <label for="nit_cliente">Numero de Farmacia</label>
+                    <label for="codigo_farmacia">Codigo de Farmacia</label>
                     <asp:TextBox ID="id_farmacia" CssClass="form-control" runat="server" required=""></asp:TextBox>
+                </div>
+                <div class="form-group">
+                    <label for="codigo_compra">Codigo de Compra</label>
+                    <asp:TextBox ID="id_compra" CssClass="form-control" runat="server" required=""></asp:TextBox>
                 </div>
                 <!--Boton enviar nuevo cliente-->
                 <asp:Button ID="Button1" CssClass="btn btn-success" runat="server" Text="Buscar" OnClick="Button1_Click1" />
@@ -31,5 +33,5 @@
             <div id="d" runat="server"></div>
 
         </div>
-    </div>
+      </div>
 </asp:Content>

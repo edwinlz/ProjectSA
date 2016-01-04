@@ -20,13 +20,14 @@ namespace Farmacia_.Presencial
         {
             d.Controls.Clear();
             Servicio.Service1SoapClient wsb = new Servicio.Service1SoapClient();
-            //int codigo = Convert.ToInt32(System.IO.File.ReadAllText("/Farmacia/codigo_tienda.txt"));
+            int codigo = Convert.ToInt32(System.IO.File.ReadAllText("/Farmacia/codigo_tienda.txt"));
             String texto = "";
-            int codigo = 0;
+            
             bool result = int.TryParse(cod_farmacia.Text, out codigo); //i now = 108
 
             if (result != false)
             {
+                
                 Servicio.ArrayOfMedicamento datos = wsb.consultar_medicamentos(codigo);
                 if (datos != null)
                 {
@@ -79,11 +80,11 @@ namespace Farmacia_.Presencial
             if (lista.Count > 0)
             {
                 texto = "<table class=\"table table-bordered\">" +
-                                "<thead><tr><th>Codigo</th><th>Nombre</th><th>Descripcion</th><th>Precio unitario</th><th>Unidades</th></thead>" +
+                                "<thead><tr><th>Nombre Producto</th><th>Descripcion</th><th>Codigo</th><th>Precio</th><th>Cantidad Disponible</th></thead>" +
                                 "<tbody>";
                 for (int i = 0; i < lista.Count; i++)
                 {
-                    texto += "<tr><td>" + lista[i].codigo_medicamento + "</td><td>" + lista[i].nombre + "</td><td>" + lista[i].descripcion + "</td><td>" + lista[i].precio_unitario + "</td><td><span class=\"badge\">" + lista[i].cantidad_disponible + "</span></td></tr>";
+                    texto += "<tr><td>" + lista[i].nombre.ToString() + "</td><td>" + lista[i].descripcion + "</td><td>" +lista[i].codigo_medicamento+ "</td><td>" + lista[i].precio_unitario + "</td><td><span class=\"badge\">" + lista[i].cantidad_disponible + "</span></td></tr>";
                 }
                 texto += "</tbody></table>";
             }
@@ -99,7 +100,8 @@ namespace Farmacia_.Presencial
             List<Servicio.medicamento> respuesta = new List<Servicio.medicamento>();
             for (int t = 0; t < lista.Count; t++)
             {
-                if (lista[t].codigo_medicamento.Equals(codigo))
+                int cod =Int32.Parse(codigo);
+                if (lista[t].codigo_medicamento.Equals(cod))
                 {
                     respuesta.Add(lista[t]);
                 }

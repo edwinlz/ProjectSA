@@ -173,7 +173,7 @@ namespace Farmacia_.Presencial
         [System.Web.Services.WebMethod]
         public static string GetTablaMedicamentos(string nombre)
         {
-            int codigo_farmacia = Convert.ToInt32(System.IO.File.ReadAllText("/Farmacia/codigo_tienda.txt"));
+            int codigo_farmacia = 0;
             String resultado = "";
             Servicio.ArrayOfMedicamento datos = wsb.consultar_medicamentos(codigo_farmacia);
             if (datos != null)
@@ -207,6 +207,7 @@ namespace Farmacia_.Presencial
         {
 
             int tienda = Convert.ToInt32(System.IO.File.ReadAllText("/Farmacia/codigo_tienda.txt"));
+            
             Servicio.cliente datos_cliente = wsb.consultar_cliente(nit_cliente.Text);
             int cliente = Convert.ToInt32(datos_cliente.id_cliente);
             ArrayOfInt data = wsb.registrar_compra(tienda, cliente, obtener_codigos(), obtener_unidades());

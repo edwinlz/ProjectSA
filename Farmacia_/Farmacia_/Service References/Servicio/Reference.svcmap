@@ -21,10 +21,10 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:62176/Service1.asmx?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://172.16.9.141:8080/Service1.asmx?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="Service11.wsdl" MetadataType="Wsdl" ID="e9b63e22-3ea2-4ee6-bd56-f81a29370334" SourceId="1" SourceUrl="http://localhost:62176/Service1.asmx?WSDL" />
+    <MetadataFile FileName="Service11.wsdl" MetadataType="Wsdl" ID="21bb4396-45cd-4f49-8947-a7e6ebb3185d" SourceId="1" SourceUrl="http://172.16.9.141:8080/Service1.asmx?WSDL" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

@@ -7,10 +7,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Presencial</title>
 
-        <link href="css/bootstrap.min.css" rel="stylesheet"/>
-        <link href="css/font-awesome.min.css" rel="stylesheet"/>
-        <link href="css/animate.css" rel="stylesheet"/>
-        <link href="css/style.css" rel="stylesheet"/>
+        <link href="/css/bootstrap.min.css" rel="stylesheet"/>
+        <link href="/css/font-awesome.min.css" rel="stylesheet"/>
+        <link href="/css/animate.css" rel="stylesheet"/>
+        <link href="/css/style.css" rel="stylesheet"/>
         <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'/>
 
 </head>

@@ -20,7 +20,7 @@ namespace Farmacia_.Presencial
         {
             d.Controls.Clear();
             Servicio.Service1SoapClient wsb = new Servicio.Service1SoapClient();
-            int codigo = Convert.ToInt32(System.IO.File.ReadAllText("/Farmacia/codigo_tienda.txt"));
+            int codigo = Int32.Parse(System.IO.File.ReadAllText("/Farmacia/codigo_tienda.txt"));
             Servicio.ArrayOfMedicamento datos = wsb.consultar_medicamentos(codigo);
 
             if (datos != null)
