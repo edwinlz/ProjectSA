@@ -1,7 +1,7 @@
 # Projecto SA
 Proyecto Software Avanzado
 
-Formularios terminados (Presencial):
+#####Formularios terminados (Presencial):
 - inicio
 - Nuevo cliente
 - Consultar cliente
@@ -10,5 +10,5 @@ Formularios terminados (Presencial):
 - Nueva compra
 - Pago
 
-Formularios terminados (CallCenter):
+#####Formularios terminados (CallCenter):
 - inicio
