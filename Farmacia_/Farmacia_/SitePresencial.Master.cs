@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace Farmacia_
 {
-    public partial class inicio : System.Web.UI.Page
+    public partial class SitePresencial : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {

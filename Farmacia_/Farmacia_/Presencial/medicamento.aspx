@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="medicamento.aspx.cs" Inherits="Farmacia_.medicamento" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="medicamento.aspx.cs" Inherits="Farmacia_.Presencial.medicamento" %>
 
 <!DOCTYPE html>
 
@@ -14,10 +14,10 @@
     <title>Farmacia</title>
 
     <!-- Bootstrap Core CSS and Custom CSS-->
-    <link href="css/bootstrap.css" rel="stylesheet" />
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
-    <link href="css/shop-homepage.css" rel="stylesheet" />
-    <link href="css/style.css" rel="stylesheet" />
+    <link href="../css/bootstrap.css" rel="stylesheet" />
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../css/shop-homepage.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
     <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css' />
 
 </head>
@@ -96,9 +96,9 @@
     <!-- /.container -->
 
     <!-- jQuery and Bootstrap Core-->
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/boton.js"></script>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/boton.js"></script>
 
 </body>
 </html>

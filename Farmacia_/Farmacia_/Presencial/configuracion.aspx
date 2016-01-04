@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="pago.aspx.cs" Inherits="Farmacia_.pago" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="configuracion.aspx.cs" Inherits="Farmacia_.Presencial.configuracion" %>
 
 <!DOCTYPE html>
 
@@ -14,10 +14,10 @@
     <title>Farmacia</title>
 
     <!-- Bootstrap Core CSS and Custom CSS-->
-    <link href="css/bootstrap.css" rel="stylesheet" />
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
-    <link href="css/shop-homepage.css" rel="stylesheet" />
-    <link href="css/style.css" rel="stylesheet" />
+    <link href="../css/bootstrap.css" rel="stylesheet" />
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../css/shop-homepage.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
     <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css' />
 
     <script src="js/jquery-2.1.1.min.js"></script>
@@ -45,11 +45,10 @@
         <div class="row">
 
             <div class="col-md-3">
-                <p class="lead">Pagos</p>
+                <p class="lead">Configuracion</p>
 
                 <div class="list-group">
                     <a class="list-group-item" href="presencial.aspx"><i class="glyphicon glyphicon-home"></i>&nbsp; Home</a>
-                    <a class="list-group-item" href="pago.aspx"><i class="glyphicon glyphicon-plus"></i>&nbsp; Nuevo Pago</a>
                 </div>
             </div>
 
@@ -58,20 +57,16 @@
 
                 </div>
                 <hr />
-                <h1>Nuevo Pago </h1>
+                <h1>Configuraciones </h1>
+                <br />
                 <form role="form" runat="server">
-                    <div class="form-group">
-                        <label for="cod_compra">Codigo Compra</label>
-                        <asp:TextBox ID="cod_compra" CssClass="form-control" runat="server" required=""></asp:TextBox>
-                    </div>
 
-                    <!-- Tipo de pago-->
                     <div class="form-group">
-                        <label for="cod_cliente">Tipo de pago</label>
-                        <asp:RadioButtonList ID="rbtLstRating" runat="server" RepeatDirection="Vertical" RepeatLayout="Table">
-                            <asp:ListItem Selected="True" Text="Efectivo" Value="1"></asp:ListItem>
-                            <asp:ListItem Text="Tarjeta" Value="2"></asp:ListItem>
-                        </asp:RadioButtonList>
+                        <div id="mostrar_span" runat="server">
+
+                        </div>
+                        <label for="cod_compra">Nuevo codigo de Farmacia</label>
+                        <asp:TextBox ID="cod_farmacia" CssClass="form-control" runat="server" required=""></asp:TextBox>
                     </div>
 
                     <asp:Button ID="Button1" CssClass="btn btn-success" runat="server" Text="Submit" OnClick="Button1_Click"/>
@@ -99,8 +94,8 @@
     <!-- /.container -->
 
     <!-- jQuery and Bootstrap Core-->
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
 
 </body>
 </html>

@@ -7,37 +7,28 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace Farmacia_ {
+namespace Farmacia_.Presencial {
     
     
-    public partial class configuracion {
+    public partial class consultarCliente {
         
         /// <summary>
-        /// Control div_mensajes.
+        /// Control formulario_1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl div_mensajes;
+        protected global::System.Web.UI.HtmlControls.HtmlForm formulario_1;
         
         /// <summary>
-        /// Control mostrar_span.
+        /// Control nit_cliente.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl mostrar_span;
-        
-        /// <summary>
-        /// Control cod_farmacia.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox cod_farmacia;
+        protected global::System.Web.UI.WebControls.TextBox nit_cliente;
         
         /// <summary>
         /// Control Button1.
@@ -47,5 +38,14 @@ namespace Farmacia_ {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Button1;
+        
+        /// <summary>
+        /// Control d.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl d;
     }
 }

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="compra.aspx.cs" Inherits="Farmacia_.compra" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="compra.aspx.cs" Inherits="Farmacia_.Presencial.compra" %>
 
 <!DOCTYPE html>
 
@@ -14,13 +14,13 @@
     <title>Farmacia</title>
 
     <!-- Bootstrap Core CSS and Custom CSS-->
-    <link href="css/bootstrap.css" rel="stylesheet" />
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
-    <link href="css/shop-homepage.css" rel="stylesheet" />
-    <link href="css/style.css" rel="stylesheet" />
+    <link href="../css/bootstrap.css" rel="stylesheet" />
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../css/shop-homepage.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
     <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css' />
 
-    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="../js/jquery-2.1.1.min.js"></script>
 
     <script>
 
@@ -174,7 +174,7 @@
     <!-- /.container -->
 
     <!-- jQuery and Bootstrap Core-->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
 
 </body>
 </html>

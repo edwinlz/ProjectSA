@@ -7,10 +7,19 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace Farmacia_ {
+namespace Farmacia_.Presencial {
     
     
-    public partial class medicamento {
+    public partial class cliente {
+        
+        /// <summary>
+        /// Control div_mensajes.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl div_mensajes;
         
         /// <summary>
         /// Control formulario_1.
@@ -22,31 +31,49 @@ namespace Farmacia_ {
         protected global::System.Web.UI.HtmlControls.HtmlForm formulario_1;
         
         /// <summary>
-        /// Control cod_farmacia.
+        /// Control nit_cliente.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox cod_farmacia;
+        protected global::System.Web.UI.WebControls.TextBox nit_cliente;
         
         /// <summary>
-        /// Control cod_medicamento.
+        /// Control nom_cliente.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox cod_medicamento;
+        protected global::System.Web.UI.WebControls.TextBox nom_cliente;
         
         /// <summary>
-        /// Control nom_comercial.
+        /// Control ape_cliente.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox nom_comercial;
+        protected global::System.Web.UI.WebControls.TextBox ape_cliente;
+        
+        /// <summary>
+        /// Control tel_cliente.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tel_cliente;
+        
+        /// <summary>
+        /// Control dir_cliente.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox dir_cliente;
         
         /// <summary>
         /// Control Button1.
@@ -56,14 +83,5 @@ namespace Farmacia_ {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Button1;
-        
-        /// <summary>
-        /// Control d.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl d;
     }
 }

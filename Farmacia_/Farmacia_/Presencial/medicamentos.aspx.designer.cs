@@ -7,9 +7,18 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace Farmacia_ {
+namespace Farmacia_.Presencial {
     
     
-    public partial class presencial {
+    public partial class medicamentos {
+        
+        /// <summary>
+        /// Control d.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl d;
     }
 }

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="consultarCliente.aspx.cs" Inherits="Farmacia_.consultarCliente" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="medicamentos.aspx.cs" Inherits="Farmacia_.Presencial.medicamentos" %>
 
 <!DOCTYPE html>
 
@@ -14,10 +14,10 @@
     <title>Farmacia</title>
 
     <!-- Bootstrap Core CSS and Custom CSS-->
-    <link href="css/bootstrap.css" rel="stylesheet" />
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
-    <link href="css/shop-homepage.css" rel="stylesheet" />
-    <link href="css/style.css" rel="stylesheet" />
+    <link href="../css/bootstrap.css" rel="stylesheet" />
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../css/shop-homepage.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
     <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css' />
 
 </head>
@@ -43,30 +43,22 @@
         <div class="row">
 
             <div class="col-md-3">
-                <p class="lead">Clientes</p>
+                <p class="lead">Medicamentos</p>
 
                 <div class="list-group">
                     <a class="list-group-item" href="presencial.aspx"><i class="glyphicon glyphicon-home"></i>&nbsp; Home</a>
-                    <a class="list-group-item" href="cliente.aspx"><i class="glyphicon glyphicon-plus"></i>&nbsp; Nuevo Cliente</a>
-                    <a class="list-group-item" href="consultarCliente.aspx"><i class="glyphicon glyphicon-book"></i>&nbsp; Consultar Cliente</a>
+                    <a class="list-group-item" href="medicamento.aspx"><i class="glyphicon glyphicon-search"></i>&nbsp; Consultar Medicamento</a>
+                    <a class="list-group-item" href="medicamentos.aspx"><i class="glyphicon glyphicon-book"></i>&nbsp; Medicamentos</a>
                 </div>
             </div>
 
             <div class="col-md-6">
                 <hr />
-                <h1>Consultar Cliente</h1>
-                <form role="form" id="formulario_1" runat="server">
-                    <div class="form-group">
-                        <label for="nit_cliente">NIT</label>
-                        <asp:TextBox ID="nit_cliente" CssClass="form-control" runat="server" required=""></asp:TextBox>
-                    </div>
-
-                    <!--Boton enviar nueva consulta-->
-                    <asp:Button ID="Button1" CssClass="btn btn-success" runat="server" Text="Submit" OnClick="Button1_Click" />
-                </form>
+                <h1>Medicamentos</h1>
                 <br />
                 <div id="d" runat="server"></div>
             </div>
+
         </div>
 
     </div>
@@ -87,8 +79,9 @@
     <!-- /.container -->
 
     <!-- jQuery and Bootstrap Core-->
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/boton.js"></script>
 
 </body>
 </html>

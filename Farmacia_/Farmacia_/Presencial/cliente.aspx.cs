@@ -6,7 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 
 
-namespace Farmacia_
+namespace Farmacia_.Presencial
 {
     public partial class cliente : System.Web.UI.Page
     {

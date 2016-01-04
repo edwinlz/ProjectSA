@@ -7,7 +7,7 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace Farmacia_ {
+namespace Farmacia_.Presencial {
     
     
     public partial class pago {

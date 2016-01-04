@@ -59,16 +59,16 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="callcenter.aspx" />
-    <Content Include="compra.aspx" />
-    <Content Include="cliente.aspx" />
-    <Content Include="consultarCliente.aspx" />
-    <Content Include="configuracion.aspx" />
+    <Content Include="CallCenter\callcenter.aspx" />
+    <Content Include="Presencial\compra.aspx" />
+    <Content Include="Presencial\cliente.aspx" />
+    <Content Include="Presencial\consultarCliente.aspx" />
+    <Content Include="Presencial\configuracion.aspx" />
     <Content Include="js\jquery-2.1.1.min.js" />
-    <Content Include="medicamentos.aspx" />
+    <Content Include="Presencial\medicamentos.aspx" />
     <Content Include="js\boton.js" />
-    <Content Include="medicamento.aspx" />
-    <Content Include="pago.aspx" />
+    <Content Include="Presencial\medicamento.aspx" />
+    <Content Include="Presencial\pago.aspx" />
     <Content Include="css\animate.css" />
     <Content Include="css\bootstrap-theme.css" />
     <Content Include="css\bootstrap-theme.min.css" />
@@ -82,11 +82,11 @@
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="index.aspx" />
-    <Content Include="inicio.aspx" />
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\npm.js" />
-    <Content Include="presencial.aspx" />
+    <Content Include="Presencial\presencial.aspx" />
+    <Content Include="Presencial\pedido.aspx" />
     <Content Include="Service References\Servicio\Farmacia_.Servicio.ArrayOfInt.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -129,60 +129,60 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="callcenter.aspx.cs">
+    <Compile Include="CallCenter\callcenter.aspx.cs">
       <DependentUpon>callcenter.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="callcenter.aspx.designer.cs">
+    <Compile Include="CallCenter\callcenter.aspx.designer.cs">
       <DependentUpon>callcenter.aspx</DependentUpon>
     </Compile>
-    <Compile Include="compra.aspx.cs">
+    <Compile Include="Presencial\compra.aspx.cs">
       <DependentUpon>compra.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="compra.aspx.designer.cs">
+    <Compile Include="Presencial\compra.aspx.designer.cs">
       <DependentUpon>compra.aspx</DependentUpon>
     </Compile>
-    <Compile Include="cliente.aspx.cs">
+    <Compile Include="Presencial\cliente.aspx.cs">
       <DependentUpon>cliente.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="cliente.aspx.designer.cs">
+    <Compile Include="Presencial\cliente.aspx.designer.cs">
       <DependentUpon>cliente.aspx</DependentUpon>
     </Compile>
-    <Compile Include="consultarCliente.aspx.cs">
+    <Compile Include="Presencial\consultarCliente.aspx.cs">
       <DependentUpon>consultarCliente.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="consultarCliente.aspx.designer.cs">
+    <Compile Include="Presencial\consultarCliente.aspx.designer.cs">
       <DependentUpon>consultarCliente.aspx</DependentUpon>
     </Compile>
-    <Compile Include="configuracion.aspx.cs">
+    <Compile Include="Presencial\configuracion.aspx.cs">
       <DependentUpon>configuracion.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="configuracion.aspx.designer.cs">
+    <Compile Include="Presencial\configuracion.aspx.designer.cs">
       <DependentUpon>configuracion.aspx</DependentUpon>
     </Compile>
-    <Compile Include="medicamentos.aspx.cs">
+    <Compile Include="Presencial\medicamentos.aspx.cs">
       <DependentUpon>medicamentos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="medicamentos.aspx.designer.cs">
+    <Compile Include="Presencial\medicamentos.aspx.designer.cs">
       <DependentUpon>medicamentos.aspx</DependentUpon>
     </Compile>
-    <Compile Include="medicamento.aspx.cs">
+    <Compile Include="Presencial\medicamento.aspx.cs">
       <DependentUpon>medicamento.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="medicamento.aspx.designer.cs">
+    <Compile Include="Presencial\medicamento.aspx.designer.cs">
       <DependentUpon>medicamento.aspx</DependentUpon>
     </Compile>
-    <Compile Include="pago.aspx.cs">
+    <Compile Include="Presencial\pago.aspx.cs">
       <DependentUpon>pago.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="pago.aspx.designer.cs">
+    <Compile Include="Presencial\pago.aspx.designer.cs">
       <DependentUpon>pago.aspx</DependentUpon>
     </Compile>
     <Compile Include="index.aspx.cs">
@@ -192,25 +192,32 @@
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
-    <Compile Include="inicio.aspx.cs">
-      <DependentUpon>inicio.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="inicio.aspx.designer.cs">
-      <DependentUpon>inicio.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="presencial.aspx.cs">
+    <Compile Include="Presencial\presencial.aspx.cs">
       <DependentUpon>presencial.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="presencial.aspx.designer.cs">
+    <Compile Include="Presencial\presencial.aspx.designer.cs">
       <DependentUpon>presencial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presencial\pedido.aspx.cs">
+      <DependentUpon>pedido.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presencial\pedido.aspx.designer.cs">
+      <DependentUpon>pedido.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service References\Servicio\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="SitePresencial.Master.cs">
+      <DependentUpon>SitePresencial.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SitePresencial.Master.designer.cs">
+      <DependentUpon>SitePresencial.Master</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -227,6 +234,7 @@
     <Content Include="fonts\fontawesome-webfont.woff" />
     <Content Include="fonts\FontAwesome.otf" />
     <None Include="Service References\Servicio\Service11.wsdl" />
+    <Content Include="SitePresencial.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

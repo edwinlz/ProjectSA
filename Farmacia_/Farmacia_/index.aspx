@@ -30,13 +30,13 @@
             <div class="row">
 
                 <div class="col-md-6">
-                    <a href="presencial.aspx" class="theme-thum">
+                    <a href="Presencial/presencial.aspx" class="theme-thum">
                         <img class="img-responsive" src="img/home-1.jpg" alt="elevator" />
                         <h4>Presencial</h4>
                     </a>
                 </div>
                 <div class="col-md-6">
-                    <a href="callcenter.aspx" class="theme-thum">
+                    <a href="CallCenter/callcenter.aspx" class="theme-thum">
                         <img class="img-responsive" src="img/home-2.jpg" alt="elevator" />
                         <h4>Call Center</h4>
                     </a>

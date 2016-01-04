@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Farmacia_
+namespace Farmacia_.Presencial
 {
-    public partial class presencial : System.Web.UI.Page
+    public partial class pedido : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
