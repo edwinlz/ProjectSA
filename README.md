@@ -1,16 +1,14 @@
 # ProjectSA
 Proyecto SA
 
-Condicion actual
-
-- Hay un menu inicial de eleccion de opciones
-
-Formularios faltantes (FASE 2)
-- Pago
-
-Formularios terminados:
+Formularios terminados (Presencial):
+- inicio
 - Nuevo cliente
 - Consultar cliente
 - Consultar medicamentos
 - Medicamentos en farmacia
 - Nueva compra
+- Pago
+
+Formularios terminados (CallCenter):
+- inicio
