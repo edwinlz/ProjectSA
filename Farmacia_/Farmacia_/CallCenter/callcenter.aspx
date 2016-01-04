@@ -5,12 +5,19 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>Presencial</title>
+    <title>CallCenter</title>
 
+<<<<<<< HEAD
         <link href="/css/bootstrap.min.css" rel="stylesheet"/>
         <link href="/css/font-awesome.min.css" rel="stylesheet"/>
         <link href="/css/animate.css" rel="stylesheet"/>
         <link href="/css/style.css" rel="stylesheet"/>
+=======
+        <link href="../css/bootstrap.min.css" rel="stylesheet"/>
+        <link href="../css/font-awesome.min.css" rel="stylesheet"/>
+        <link href="../css/animate.css" rel="stylesheet"/>
+        <link href="../css/style.css" rel="stylesheet"/>
+>>>>>>> 8075edd8ea5cefd209292b3ab57da4f5a35ac98f
         <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'/>
 
 </head>
