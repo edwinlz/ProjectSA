@@ -8,7 +8,7 @@
             <p class="lead">Pedidos</p>
 
             <div class="list-group">
-                <a class="list-group-item" href="presencial.aspx"><i class="glyphicon glyphicon-home"></i>&nbsp; Home</a>
+                <a class="list-group-item" href="callcenter.aspx"><i class="glyphicon glyphicon-home"></i>&nbsp; Home</a>
                 <a class="list-group-item" href="pedido.aspx"><i class="glyphicon glyphicon-plus"></i>&nbsp; Pedidos</a>
                 <a class="list-group-item" href="RealizarPedido.aspx"><i class="glyphicon glyphicon-book"></i>&nbsp;Asignar pedido</a>
             </div>
