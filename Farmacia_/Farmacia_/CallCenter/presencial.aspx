@@ -1,17 +1,11 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="callcenter.aspx.cs" Inherits="Farmacia_.callcenter" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="presencial.aspx.cs" Inherits="Farmacia_.CallCenter.presencial" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head id="Head1" runat="server">
+<head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>CallCenter</title>
-
-        <link href="/css/bootstrap.min.css" rel="stylesheet"/>
-        <link href="/css/font-awesome.min.css" rel="stylesheet"/>
-        <link href="/css/animate.css" rel="stylesheet"/>
-        <link href="/css/style.css" rel="stylesheet"/>
-
+    <title>Presencial</title>
         <link href="../css/bootstrap.min.css" rel="stylesheet"/>
         <link href="../css/font-awesome.min.css" rel="stylesheet"/>
         <link href="../css/animate.css" rel="stylesheet"/>
@@ -79,17 +73,17 @@
                     
                     <div class="col-md-4">
                         
-                        <div class="menu-item light-red">
+                        <div class="menu-item light-orange">
                             <a href="pago.aspx" data-toggle="modal">
                                 <i class="fa fa-money"></i>
                                 <p>Pagos</p>
                             </a>
                         </div>
                         
-                        <div class="menu-item color">
-                            <a href="" data-toggle="modal">
-                                <i class="fa fa-comment-o"></i>
-                                <p>About</p>
+                        <div class="menu-item blue">
+                            <a href="configuracion.aspx" data-toggle="modal">
+                                <i class="fa fa-cog fa-fw"></i>
+                                <p>Configuracion</p>
                             </a>
                         </div>
                         

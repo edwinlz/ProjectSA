@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://webservices.sa/" targetNamespace="http://webservices.sa/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="agregar_cliente" type="tns:agregar_cliente" />
+  <xs:element name="agregar_clienteResponse" type="tns:agregar_clienteResponse" />
+  <xs:element name="agregar_detalle_pedido" type="tns:agregar_detalle_pedido" />
+  <xs:element name="agregar_detalle_pedidoResponse" type="tns:agregar_detalle_pedidoResponse" />
+  <xs:element name="agregar_pedido" type="tns:agregar_pedido" />
+  <xs:element name="agregar_pedidoResponse" type="tns:agregar_pedidoResponse" />
+  <xs:element name="agregar_producto" type="tns:agregar_producto" />
+  <xs:element name="agregar_productoResponse" type="tns:agregar_productoResponse" />
+  <xs:element name="buscar_cliente" type="tns:buscar_cliente" />
+  <xs:element name="buscar_clienteResponse" type="tns:buscar_clienteResponse" />
+  <xs:element name="cancelar_pedido" type="tns:cancelar_pedido" />
+  <xs:element name="cancelar_pedidoResponse" type="tns:cancelar_pedidoResponse" />
+  <xs:element name="consultar_catalogo_clientes" type="tns:consultar_catalogo_clientes" />
+  <xs:element name="consultar_catalogo_clientesResponse" type="tns:consultar_catalogo_clientesResponse" />
+  <xs:element name="consultar_catalogo_medicamentos" type="tns:consultar_catalogo_medicamentos" />
+  <xs:element name="consultar_catalogo_medicamentosResponse" type="tns:consultar_catalogo_medicamentosResponse" />
+  <xs:element name="obtener_detalle_pedido" type="tns:obtener_detalle_pedido" />
+  <xs:element name="obtener_detalle_pedidoResponse" type="tns:obtener_detalle_pedidoResponse" />
+  <xs:element name="obtener_pedidos" type="tns:obtener_pedidos" />
+  <xs:element name="obtener_pedidosResponse" type="tns:obtener_pedidosResponse" />
+  <xs:element name="pagar_pedido" type="tns:pagar_pedido" />
+  <xs:element name="pagar_pedidoResponse" type="tns:pagar_pedidoResponse" />
+  <xs:element name="verificar_existencia" type="tns:verificar_existencia" />
+  <xs:element name="verificar_existenciaResponse" type="tns:verificar_existenciaResponse" />
+  <xs:complexType name="pagar_pedido">
+    <xs:sequence>
+      <xs:element name="idPedido" type="xs:int" />
+      <xs:element name="tipoPago" type="xs:int" />
+      <xs:element name="decrementar" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="pagar_pedidoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:pago" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="pago">
+    <xs:sequence>
+      <xs:element name="subtotal" type="xs:double" />
+      <xs:element name="total" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="agregar_producto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element name="precio" type="xs:double" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element name="cantidad" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="agregar_productoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="agregar_cliente">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="direccion" type="xs:string" />
+      <xs:element minOccurs="0" name="nit" type="xs:string" />
+      <xs:element minOccurs="0" name="telefono" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="agregar_clienteResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtener_detalle_pedido">
+    <xs:sequence>
+      <xs:element name="idPedido" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtener_detalle_pedidoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:pedido" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="pedido">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cliente" type="xs:string" />
+      <xs:element minOccurs="0" name="direccion" type="xs:string" />
+      <xs:element minOccurs="0" name="estado" type="xs:string" />
+      <xs:element minOccurs="0" name="fecha" type="tns:date" />
+      <xs:element name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="nit" type="xs:string" />
+      <xs:element name="subTotal" type="xs:double" />
+      <xs:element minOccurs="0" name="tipoPago" type="xs:string" />
+      <xs:element name="total" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="date">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="obtener_pedidos">
+    <xs:sequence>
+      <xs:element name="idPedido" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtener_pedidosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:pedido" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="verificar_existencia">
+    <xs:sequence>
+      <xs:element name="idProducto" type="xs:int" />
+      <xs:element name="cantidad" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="verificar_existenciaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="consultar_catalogo_medicamentos">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="consultar_catalogo_medicamentosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:producto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="producto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element name="precio" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="agregar_pedido">
+    <xs:sequence>
+      <xs:element name="idCliente" type="xs:int" />
+      <xs:element name="idCallCenter" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="agregar_pedidoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="agregar_detalle_pedido">
+    <xs:sequence>
+      <xs:element name="idPedido" type="xs:int" />
+      <xs:element name="idProducto" type="xs:int" />
+      <xs:element name="cantidad" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="agregar_detalle_pedidoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cancelar_pedido">
+    <xs:sequence>
+      <xs:element name="idPedido" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cancelar_pedidoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="buscar_cliente">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nit" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="buscar_clienteResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:cliente" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cliente">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="direccion" type="xs:string" />
+      <xs:element name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="nit" type="xs:string" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="telefono" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="consultar_catalogo_clientes">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="consultar_catalogo_clientesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:cliente" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

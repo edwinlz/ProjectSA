@@ -60,6 +60,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CallCenter\callcenter.aspx" />
+    <Content Include="CallCenter\cliente.aspx" />
+    <Content Include="CallCenter\compra.aspx" />
+    <Content Include="CallCenter\configuracion.aspx" />
+    <Content Include="CallCenter\consultarCliente.aspx" />
+    <Content Include="CallCenter\medicamento.aspx" />
+    <Content Include="CallCenter\medicamentos.aspx" />
+    <Content Include="CallCenter\pago.aspx" />
+    <Content Include="CallCenter\pedido.aspx" />
+    <Content Include="CallCenter\presencial.aspx" />
+    <Content Include="CallCenter\RealizarPedido.aspx" />
     <Content Include="Presencial\compra.aspx" />
     <Content Include="Presencial\cliente.aspx" />
     <Content Include="Presencial\consultarCliente.aspx" />
@@ -88,6 +98,60 @@
     <Content Include="Presencial\presencial.aspx" />
     <Content Include="Presencial\pedido.aspx" />
     <Content Include="Presencial\RealizarPedido.aspx" />
+    <None Include="Service References\Pablo\configuration91.svcinfo" />
+    <None Include="Service References\Pablo\configuration.svcinfo" />
+    <Content Include="Service References\Pablo\Farmacia_.Pablo.agregar_clienteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Pablo\Farmacia_.Pablo.agregar_detalle_pedidoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Pablo\Farmacia_.Pablo.agregar_pedidoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Pablo\Farmacia_.Pablo.agregar_productoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Pablo\Farmacia_.Pablo.buscar_clienteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Pablo\Farmacia_.Pablo.cancelar_pedidoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Pablo\Farmacia_.Pablo.cliente.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Pablo\Farmacia_.Pablo.consultar_catalogo_clientesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Pablo\Farmacia_.Pablo.consultar_catalogo_medicamentosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Pablo\Farmacia_.Pablo.obtener_detalle_pedidoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Pablo\Farmacia_.Pablo.obtener_pedidosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Pablo\Farmacia_.Pablo.pagar_pedidoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Pablo\Farmacia_.Pablo.pago.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Pablo\Farmacia_.Pablo.pedido.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Pablo\Farmacia_.Pablo.producto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Pablo\Farmacia_.Pablo.verificar_existenciaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\Pablo\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Service References\Servicio\Farmacia_.Servicio.ArrayOfInt.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -109,6 +173,10 @@
     <Content Include="Service References\Servicio\Farmacia_.Servicio.registrar_compraResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <None Include="Service References\Pablo\WSFarmacia11.wsdl" />
+    <None Include="Service References\Pablo\WSFarmacia11.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\Servicio\configuration91.svcinfo" />
     <None Include="Service References\Servicio\configuration.svcinfo" />
     <Content Include="Service References\Servicio\Farmacia_.Servicio.ArrayOfCliente.datasource">
@@ -142,6 +210,76 @@
     </Compile>
     <Compile Include="CallCenter\callcenter.aspx.designer.cs">
       <DependentUpon>callcenter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CallCenter\cliente.aspx.cs">
+      <DependentUpon>cliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CallCenter\cliente.aspx.designer.cs">
+      <DependentUpon>cliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CallCenter\compra.aspx.cs">
+      <DependentUpon>compra.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CallCenter\compra.aspx.designer.cs">
+      <DependentUpon>compra.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CallCenter\configuracion.aspx.cs">
+      <DependentUpon>configuracion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CallCenter\configuracion.aspx.designer.cs">
+      <DependentUpon>configuracion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CallCenter\consultarCliente.aspx.cs">
+      <DependentUpon>consultarCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CallCenter\consultarCliente.aspx.designer.cs">
+      <DependentUpon>consultarCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CallCenter\medicamento.aspx.cs">
+      <DependentUpon>medicamento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CallCenter\medicamento.aspx.designer.cs">
+      <DependentUpon>medicamento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CallCenter\medicamentos.aspx.cs">
+      <DependentUpon>medicamentos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CallCenter\medicamentos.aspx.designer.cs">
+      <DependentUpon>medicamentos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CallCenter\pago.aspx.cs">
+      <DependentUpon>pago.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CallCenter\pago.aspx.designer.cs">
+      <DependentUpon>pago.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CallCenter\pedido.aspx.cs">
+      <DependentUpon>pedido.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CallCenter\pedido.aspx.designer.cs">
+      <DependentUpon>pedido.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CallCenter\presencial.aspx.cs">
+      <DependentUpon>presencial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CallCenter\presencial.aspx.designer.cs">
+      <DependentUpon>presencial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CallCenter\RealizarPedido.aspx.cs">
+      <DependentUpon>RealizarPedido.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CallCenter\RealizarPedido.aspx.designer.cs">
+      <DependentUpon>RealizarPedido.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presencial\compra.aspx.cs">
       <DependentUpon>compra.aspx</DependentUpon>
@@ -221,6 +359,11 @@
       <DependentUpon>RealizarPedido.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\Pablo\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Service References\Servicio\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -263,6 +406,7 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Service References\Pablo\" />
     <WCFMetadataStorage Include="Service References\Servicio\" />
   </ItemGroup>
   <PropertyGroup>
