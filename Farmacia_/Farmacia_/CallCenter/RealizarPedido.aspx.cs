@@ -22,7 +22,9 @@ namespace Farmacia_.CallCenter
         
             d.Controls.Clear();
             int farmacia = 0;
-            Servicio.Service1SoapClient wsb = new Servicio.Service1SoapClient();
+
+            Pablo.WSFarmacia11Client wsb = new Pablo.WSFarmacia11Client();
+
             String texto = "";
             bool result = int.TryParse(id_farmacia.Text, out farmacia);
             if (result != false)
@@ -32,7 +34,7 @@ namespace Farmacia_.CallCenter
                if (result2)
                 {
 
-                     int resultado =wsb.registrar_pedido(farmacia,compra);
+                     int resultado =wsb.agregar_pedido(farmacia,compra);
                      if (resultado == -1)
                      {
                          texto = "<p>Error en el registro del pedido</p>";
