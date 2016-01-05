@@ -31,49 +31,13 @@ namespace Farmacia_.CallCenter {
         protected global::System.Web.UI.HtmlControls.HtmlForm formulario_1;
         
         /// <summary>
-        /// nit_cliente control.
+        /// d control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox nit_cliente;
-        
-        /// <summary>
-        /// nom_cliente control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox nom_cliente;
-        
-        /// <summary>
-        /// ape_cliente control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox ape_cliente;
-        
-        /// <summary>
-        /// tel_cliente control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tel_cliente;
-        
-        /// <summary>
-        /// dir_cliente control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox dir_cliente;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl d;
         
         /// <summary>
         /// Button1 control.

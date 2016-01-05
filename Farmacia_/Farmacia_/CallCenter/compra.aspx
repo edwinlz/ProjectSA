@@ -96,7 +96,7 @@
                 <p class="lead">Compras</p>
 
                 <div class="list-group">
-                    <a class="list-group-item" href="presencial.aspx"><i class="glyphicon glyphicon-home"></i>&nbsp; Home</a>
+                    <a class="list-group-item" href="callcenter.aspx""><i class="glyphicon glyphicon-home"></i>&nbsp; Home</a>
                     <a class="list-group-item" href="compra.aspx"><i class="glyphicon glyphicon-plus"></i>&nbsp; Nueva Compra</a>
                 </div>
             </div>

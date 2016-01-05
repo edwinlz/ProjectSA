@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
+using System.Collections;
 using System.Web.UI.WebControls;
 
 namespace Farmacia_.CallCenter
@@ -18,9 +19,18 @@ namespace Farmacia_.CallCenter
         protected void Button1_Click(object sender, EventArgs e)
         {
             Pablo.WSFarmacia11Client wsb = new Pablo.WSFarmacia11Client();
+
+
+            var cliente = wsb.buscar_cliente(this.nit_cliente.Text);
+
+
             String texto = "<table class=\"table table-bordered\">" +
-                                "<thead><tr><th>Codigo</th><th>Nombre</th><th>Apellido</th></tr></thead>" +
-                                "<tbody>";
+                                "<thead><tr><th>Codigo</th><th>Nombre</th><th>Nit</th></tr></thead>" +
+                                "<tbody><tr>" +
+                                 "<td>" + cliente.id+ "</td><td>" + cliente.nombre+ "</td><td>" + cliente.nit + "</td>" +
+                                 "</tr>";
+/*
+
            foreach (var item in wsb.consultar_catalogo_clientes())
             {
             
@@ -29,23 +39,10 @@ namespace Farmacia_.CallCenter
                                  "</tr>";
                 
             }
-
+            */
            texto += "</tbody></table>";
            d.Controls.Add(new LiteralControl(texto));
-            /*if (!String.IsNullOrEmpty(lista.id_cliente))
-            {
-                    String texto = "<table class=\"table table-bordered\">" +
-                               "<thead><tr><th>Codigo</th><th>Nombre</th><th>Apellido</th></tr></thead>" +
-                               "<tbody><tr>" +
-                               "<td>" + lista.id_cliente + "</td><td>" + lista.nombre + "</td><td>" + lista.apellido + "</td>" +
-                               "</tr></tbody></table>";
-                    d.Controls.Add(new LiteralControl(texto));
-            }
-            else
-            {
-                d.Controls.Add(new LiteralControl("<p>Ocurrio un error al recuperar cliente<p>"));
-            }
-             * */
+        
         }
     }
 

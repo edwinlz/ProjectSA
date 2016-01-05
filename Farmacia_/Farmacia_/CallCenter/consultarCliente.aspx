@@ -46,8 +46,8 @@
                 <p class="lead">Clientes</p>
 
                 <div class="list-group">
-                    <a class="list-group-item" href="presencial.aspx"><i class="glyphicon glyphicon-home"></i>&nbsp; Home</a>
-                    <a class="list-group-item" href="cliente.aspx"><i class="glyphicon glyphicon-plus"></i>&nbsp; Nuevo Cliente</a>
+                    <a class="list-group-item" href="callcenter.aspx""><i class="glyphicon glyphicon-home"></i>&nbsp; Home</a>
+                    <a class="list-group-item" href="cliente.aspx"><i class="glyphicon glyphicon-plus"></i>&nbsp; Lista Clientes</a>
                     <a class="list-group-item" href="consultarCliente.aspx"><i class="glyphicon glyphicon-book"></i>&nbsp; Consultar Cliente</a>
                 </div>
             </div>
