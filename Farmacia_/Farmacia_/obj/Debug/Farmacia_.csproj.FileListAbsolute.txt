@@ -14,3 +14,8 @@ C:\Users\Luis\Documents\ProjectSA\Farmacia_\Farmacia_\bin\Farmacia_.pdb
 C:\Users\Luis\Documents\ProjectSA\Farmacia_\Farmacia_\obj\Debug\Farmacia_.csprojResolveAssemblyReference.cache
 C:\Users\Luis\Documents\ProjectSA\Farmacia_\Farmacia_\obj\Debug\Farmacia_.dll
 C:\Users\Luis\Documents\ProjectSA\Farmacia_\Farmacia_\obj\Debug\Farmacia_.pdb
+C:\Users\Francisco\Desktop\ProjectSA\Farmacia_\Farmacia_\bin\Farmacia_.dll
+C:\Users\Francisco\Desktop\ProjectSA\Farmacia_\Farmacia_\bin\Farmacia_.pdb
+C:\Users\Francisco\Desktop\ProjectSA\Farmacia_\Farmacia_\obj\Debug\Farmacia_.csprojResolveAssemblyReference.cache
+C:\Users\Francisco\Desktop\ProjectSA\Farmacia_\Farmacia_\obj\Debug\Farmacia_.dll
+C:\Users\Francisco\Desktop\ProjectSA\Farmacia_\Farmacia_\obj\Debug\Farmacia_.pdb

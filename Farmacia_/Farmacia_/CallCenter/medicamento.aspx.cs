@@ -19,59 +19,49 @@ namespace Farmacia_.CallCenter
         protected void Button1_Click(object sender, EventArgs e)
         {
             d.Controls.Clear();
-            Servicio.Service1SoapClient wsb = new Servicio.Service1SoapClient();
-            int codigo = Convert.ToInt32(System.IO.File.ReadAllText("/Farmacia/codigo_tienda.txt"));
             String texto = "";
-            
-            bool result = int.TryParse(cod_farmacia.Text, out codigo); //i now = 108
-
-            if (result != false)
+            Pablo.WSFarmacia11Client wsb = new Pablo.WSFarmacia11Client();
+            if (cod_medicamento.Text != "")
             {
-                
-                Servicio.ArrayOfMedicamento datos = wsb.consultar_medicamentos(codigo);
-                if (datos != null)
+                texto = "<table class=\"table table-bordered\">" +
+                                "<thead><tr><th>Codigo</th><th>Nombre</th><th>Descripcion</th><th>Precio</th></tr></thead>" +
+                                "<tbody>";
+                foreach (var item in wsb.consultar_catalogo_medicamentos())
                 {
-                    //obtengo datos de web service
-                    List<Servicio.medicamento> lista = datos.ToList();
-                    if (lista.Count > 0)
+
+                    if (item.id == Int32.Parse(cod_medicamento.Text))
                     {
-                        //aplico filtros
-                        if (cod_medicamento.Text != "")
-                        {
-                            lista = buscar_codigo(lista, cod_medicamento.Text);
-                        }
-
-                        if (nom_comercial.Text != "")
-                        {
-                            lista = buscar_nombre(lista, nom_comercial.Text);
-                        }
-
-                        //envio resultados
-                        if (lista.Count > 0)
-                        {
-                            texto = obtener_tabla(lista);
-                            d.Controls.Add(new LiteralControl(texto));
-                        }
-                        else {
-                            d.Controls.Add(new LiteralControl("<p>El medicamento indicado no existe<p>"));
-                        }
-
-                    }
-                    else {
-                        d.Controls.Add(new LiteralControl("<p>No hay medicamentos disponibles<p>"));
+                        texto += "<tr>" +
+                         "<td>" + item.id + "</td><td>" + item.nombre + "</td><td>" + item.descripcion + "</td><td>" + item.precio + "</td>" +
+                         "</tr>";
                     }
                 }
-                else
-                {
-                    texto = "<p>Hubo un error al cargar medicamentos</p>";
-                    d.Controls.Add(new LiteralControl(texto));
-                }
+
+                texto += "</tbody></table>";
             }
-            else
+            else if (nom_comercial.Text != "")
             {
-                texto = "<p>El codigo de farmacia debe ser un numero</p>";
-                d.Controls.Add(new LiteralControl(texto));
+                texto = "<table class=\"table table-bordered\">" +
+                "<thead><tr><th>Codigo</th><th>Nombre</th><th>Descripcion</th><th>Precio</th></tr></thead>" +
+                "<tbody>";
+                foreach (var item in wsb.consultar_catalogo_medicamentos())
+                {
+
+                    if (item.nombre.Equals(nom_comercial.Text))
+                    {
+                        texto += "<tr>" +
+                         "<td>" + item.id + "</td><td>" + item.nombre + "</td><td>" + item.descripcion + "</td><td>" + item.precio + "</td>" +
+                         "</tr>";
+                    }
+                }
+
+                texto += "</tbody></table>";
             }
+            else 
+            {
+                texto = "LLene un campo";
+            }
+            d.Controls.Add(new LiteralControl(texto));
         }
 
         public String obtener_tabla(List<Servicio.medicamento> lista)

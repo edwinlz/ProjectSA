@@ -12,8 +12,31 @@ namespace Farmacia_.CallCenter
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            cargar();
+            //cargar();
+            carga();
         }
+        private void carga()
+        {
+            d.Controls.Clear();
+            Pablo.WSFarmacia11Client wsb = new Pablo.WSFarmacia11Client();
+            String texto = "<table class=\"table table-bordered\">" +
+                                "<thead><tr><th>Codigo</th><th>Nombre</th><th>Descripcion</th><th>Precio</th></tr></thead>" +
+                                "<tbody>";
+            foreach (var item in wsb.consultar_catalogo_medicamentos())
+            {
+
+                texto += "<tr>" +
+                     "<td>" + item.id + "</td><td>" + item.nombre + "</td><td>" + item.descripcion+ "</td><td>" + item.precio +"</td>" +
+                     "</tr>";
+
+            }
+
+            texto += "</tbody></table>";
+            d.Controls.Add(new LiteralControl(texto));
+
+        
+        }
+
 
         //Carga la lista de medicamentos
         private void cargar()

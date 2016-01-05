@@ -491,10 +491,10 @@
   </wsdl:binding>
   <wsdl:service name="Service1">
     <wsdl:port name="Service1Soap" binding="tns:Service1Soap">
-      <soap:address location="http://172.16.9.141:8080/Service1.asmx" />
+      <soap:address location="http://192.168.43.188:8080/Service1.asmx" />
     </wsdl:port>
     <wsdl:port name="Service1Soap12" binding="tns:Service1Soap12">
-      <soap12:address location="http://172.16.9.141:8080/Service1.asmx" />
+      <soap12:address location="http://192.168.43.188:8080/Service1.asmx" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>
