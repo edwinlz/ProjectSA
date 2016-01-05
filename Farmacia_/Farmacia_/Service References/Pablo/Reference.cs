@@ -16,24 +16,6 @@ namespace Farmacia_.Pablo {
     public interface WSFarmacia11 {
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sa/WSFarmacia11/obtener_pedidosRequest", ReplyAction="http://webservices.sa/WSFarmacia11/obtener_pedidosResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Farmacia_.Pablo.obtener_pedidosResponse obtener_pedidos(Farmacia_.Pablo.obtener_pedidosRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sa/WSFarmacia11/obtener_pedidosRequest", ReplyAction="http://webservices.sa/WSFarmacia11/obtener_pedidosResponse")]
-        System.Threading.Tasks.Task<Farmacia_.Pablo.obtener_pedidosResponse> obtener_pedidosAsync(Farmacia_.Pablo.obtener_pedidosRequest request);
-        
-        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sa/WSFarmacia11/obtener_detalle_pedidoRequest", ReplyAction="http://webservices.sa/WSFarmacia11/obtener_detalle_pedidoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Farmacia_.Pablo.obtener_detalle_pedidoResponse obtener_detalle_pedido(Farmacia_.Pablo.obtener_detalle_pedidoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sa/WSFarmacia11/obtener_detalle_pedidoRequest", ReplyAction="http://webservices.sa/WSFarmacia11/obtener_detalle_pedidoResponse")]
-        System.Threading.Tasks.Task<Farmacia_.Pablo.obtener_detalle_pedidoResponse> obtener_detalle_pedidoAsync(Farmacia_.Pablo.obtener_detalle_pedidoRequest request);
-        
-        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sa/WSFarmacia11/cancelar_pedidoRequest", ReplyAction="http://webservices.sa/WSFarmacia11/cancelar_pedidoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -106,6 +88,24 @@ namespace Farmacia_.Pablo {
         System.Threading.Tasks.Task<Farmacia_.Pablo.buscar_clienteResponse> buscar_clienteAsync(Farmacia_.Pablo.buscar_clienteRequest request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sa/WSFarmacia11/obtener_pedidosRequest", ReplyAction="http://webservices.sa/WSFarmacia11/obtener_pedidosResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        Farmacia_.Pablo.obtener_pedidosResponse obtener_pedidos(Farmacia_.Pablo.obtener_pedidosRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sa/WSFarmacia11/obtener_pedidosRequest", ReplyAction="http://webservices.sa/WSFarmacia11/obtener_pedidosResponse")]
+        System.Threading.Tasks.Task<Farmacia_.Pablo.obtener_pedidosResponse> obtener_pedidosAsync(Farmacia_.Pablo.obtener_pedidosRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sa/WSFarmacia11/obtener_detalle_pedidoRequest", ReplyAction="http://webservices.sa/WSFarmacia11/obtener_detalle_pedidoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        Farmacia_.Pablo.obtener_detalle_pedidoResponse obtener_detalle_pedido(Farmacia_.Pablo.obtener_detalle_pedidoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sa/WSFarmacia11/obtener_detalle_pedidoRequest", ReplyAction="http://webservices.sa/WSFarmacia11/obtener_detalle_pedidoResponse")]
+        System.Threading.Tasks.Task<Farmacia_.Pablo.obtener_detalle_pedidoResponse> obtener_detalle_pedidoAsync(Farmacia_.Pablo.obtener_detalle_pedidoRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sa/WSFarmacia11/pagar_pedidoRequest", ReplyAction="http://webservices.sa/WSFarmacia11/pagar_pedidoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -122,448 +122,6 @@ namespace Farmacia_.Pablo {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sa/WSFarmacia11/agregar_clienteRequest", ReplyAction="http://webservices.sa/WSFarmacia11/agregar_clienteResponse")]
         System.Threading.Tasks.Task<Farmacia_.Pablo.agregar_clienteResponse> agregar_clienteAsync(Farmacia_.Pablo.agregar_clienteRequest request);
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1038.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservices.sa/")]
-    public partial class pedido : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string clienteField;
-        
-        private string direccionField;
-        
-        private string estadoField;
-        
-        private date fechaField;
-        
-        private int idField;
-        
-        private string nitField;
-        
-        private double subTotalField;
-        
-        private string tipoPagoField;
-        
-        private double totalField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string cliente {
-            get {
-                return this.clienteField;
-            }
-            set {
-                this.clienteField = value;
-                this.RaisePropertyChanged("cliente");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string direccion {
-            get {
-                return this.direccionField;
-            }
-            set {
-                this.direccionField = value;
-                this.RaisePropertyChanged("direccion");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string estado {
-            get {
-                return this.estadoField;
-            }
-            set {
-                this.estadoField = value;
-                this.RaisePropertyChanged("estado");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public date fecha {
-            get {
-                return this.fechaField;
-            }
-            set {
-                this.fechaField = value;
-                this.RaisePropertyChanged("fecha");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public int id {
-            get {
-                return this.idField;
-            }
-            set {
-                this.idField = value;
-                this.RaisePropertyChanged("id");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public string nit {
-            get {
-                return this.nitField;
-            }
-            set {
-                this.nitField = value;
-                this.RaisePropertyChanged("nit");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public double subTotal {
-            get {
-                return this.subTotalField;
-            }
-            set {
-                this.subTotalField = value;
-                this.RaisePropertyChanged("subTotal");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
-        public string tipoPago {
-            get {
-                return this.tipoPagoField;
-            }
-            set {
-                this.tipoPagoField = value;
-                this.RaisePropertyChanged("tipoPago");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
-        public double total {
-            get {
-                return this.totalField;
-            }
-            set {
-                this.totalField = value;
-                this.RaisePropertyChanged("total");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1038.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservices.sa/")]
-    public partial class date : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1038.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservices.sa/")]
-    public partial class pago : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private double subtotalField;
-        
-        private double totalField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public double subtotal {
-            get {
-                return this.subtotalField;
-            }
-            set {
-                this.subtotalField = value;
-                this.RaisePropertyChanged("subtotal");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public double total {
-            get {
-                return this.totalField;
-            }
-            set {
-                this.totalField = value;
-                this.RaisePropertyChanged("total");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1038.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservices.sa/")]
-    public partial class producto : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string descripcionField;
-        
-        private int idField;
-        
-        private string nombreField;
-        
-        private double precioField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string descripcion {
-            get {
-                return this.descripcionField;
-            }
-            set {
-                this.descripcionField = value;
-                this.RaisePropertyChanged("descripcion");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public int id {
-            get {
-                return this.idField;
-            }
-            set {
-                this.idField = value;
-                this.RaisePropertyChanged("id");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string nombre {
-            get {
-                return this.nombreField;
-            }
-            set {
-                this.nombreField = value;
-                this.RaisePropertyChanged("nombre");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public double precio {
-            get {
-                return this.precioField;
-            }
-            set {
-                this.precioField = value;
-                this.RaisePropertyChanged("precio");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1038.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservices.sa/")]
-    public partial class cliente : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string direccionField;
-        
-        private int idField;
-        
-        private string nitField;
-        
-        private string nombreField;
-        
-        private string telefonoField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string direccion {
-            get {
-                return this.direccionField;
-            }
-            set {
-                this.direccionField = value;
-                this.RaisePropertyChanged("direccion");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public int id {
-            get {
-                return this.idField;
-            }
-            set {
-                this.idField = value;
-                this.RaisePropertyChanged("id");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string nit {
-            get {
-                return this.nitField;
-            }
-            set {
-                this.nitField = value;
-                this.RaisePropertyChanged("nit");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string nombre {
-            get {
-                return this.nombreField;
-            }
-            set {
-                this.nombreField = value;
-                this.RaisePropertyChanged("nombre");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public string telefono {
-            get {
-                return this.telefonoField;
-            }
-            set {
-                this.telefonoField = value;
-                this.RaisePropertyChanged("telefono");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="obtener_pedidos", WrapperNamespace="http://webservices.sa/", IsWrapped=true)]
-    public partial class obtener_pedidosRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sa/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idPedido;
-        
-        public obtener_pedidosRequest() {
-        }
-        
-        public obtener_pedidosRequest(int idPedido) {
-            this.idPedido = idPedido;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="obtener_pedidosResponse", WrapperNamespace="http://webservices.sa/", IsWrapped=true)]
-    public partial class obtener_pedidosResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sa/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public Farmacia_.Pablo.pedido[] @return;
-        
-        public obtener_pedidosResponse() {
-        }
-        
-        public obtener_pedidosResponse(Farmacia_.Pablo.pedido[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="obtener_detalle_pedido", WrapperNamespace="http://webservices.sa/", IsWrapped=true)]
-    public partial class obtener_detalle_pedidoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sa/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idPedido;
-        
-        public obtener_detalle_pedidoRequest() {
-        }
-        
-        public obtener_detalle_pedidoRequest(int idPedido) {
-            this.idPedido = idPedido;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="obtener_detalle_pedidoResponse", WrapperNamespace="http://webservices.sa/", IsWrapped=true)]
-    public partial class obtener_detalle_pedidoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sa/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public Farmacia_.Pablo.pedido[] @return;
-        
-        public obtener_detalle_pedidoResponse() {
-        }
-        
-        public obtener_detalle_pedidoResponse(Farmacia_.Pablo.pedido[] @return) {
-            this.@return = @return;
-        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -781,6 +339,358 @@ namespace Farmacia_.Pablo {
         }
     }
     
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1038.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservices.sa/")]
+    public partial class cliente : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string direccionField;
+        
+        private int idField;
+        
+        private string nitField;
+        
+        private string nombreField;
+        
+        private string telefonoField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string direccion {
+            get {
+                return this.direccionField;
+            }
+            set {
+                this.direccionField = value;
+                this.RaisePropertyChanged("direccion");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public int id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+                this.RaisePropertyChanged("id");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string nit {
+            get {
+                return this.nitField;
+            }
+            set {
+                this.nitField = value;
+                this.RaisePropertyChanged("nit");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string nombre {
+            get {
+                return this.nombreField;
+            }
+            set {
+                this.nombreField = value;
+                this.RaisePropertyChanged("nombre");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public string telefono {
+            get {
+                return this.telefonoField;
+            }
+            set {
+                this.telefonoField = value;
+                this.RaisePropertyChanged("telefono");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1038.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservices.sa/")]
+    public partial class pago : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private double subtotalField;
+        
+        private double totalField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public double subtotal {
+            get {
+                return this.subtotalField;
+            }
+            set {
+                this.subtotalField = value;
+                this.RaisePropertyChanged("subtotal");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public double total {
+            get {
+                return this.totalField;
+            }
+            set {
+                this.totalField = value;
+                this.RaisePropertyChanged("total");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1038.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservices.sa/")]
+    public partial class pedido : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string clienteField;
+        
+        private string direccionField;
+        
+        private string estadoField;
+        
+        private string fechaField;
+        
+        private int idField;
+        
+        private string nitField;
+        
+        private double subTotalField;
+        
+        private string tipoPagoField;
+        
+        private double totalField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string cliente {
+            get {
+                return this.clienteField;
+            }
+            set {
+                this.clienteField = value;
+                this.RaisePropertyChanged("cliente");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string direccion {
+            get {
+                return this.direccionField;
+            }
+            set {
+                this.direccionField = value;
+                this.RaisePropertyChanged("direccion");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string estado {
+            get {
+                return this.estadoField;
+            }
+            set {
+                this.estadoField = value;
+                this.RaisePropertyChanged("estado");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string fecha {
+            get {
+                return this.fechaField;
+            }
+            set {
+                this.fechaField = value;
+                this.RaisePropertyChanged("fecha");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public int id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+                this.RaisePropertyChanged("id");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public string nit {
+            get {
+                return this.nitField;
+            }
+            set {
+                this.nitField = value;
+                this.RaisePropertyChanged("nit");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public double subTotal {
+            get {
+                return this.subTotalField;
+            }
+            set {
+                this.subTotalField = value;
+                this.RaisePropertyChanged("subTotal");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        public string tipoPago {
+            get {
+                return this.tipoPagoField;
+            }
+            set {
+                this.tipoPagoField = value;
+                this.RaisePropertyChanged("tipoPago");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        public double total {
+            get {
+                return this.totalField;
+            }
+            set {
+                this.totalField = value;
+                this.RaisePropertyChanged("total");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1038.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservices.sa/")]
+    public partial class producto : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string descripcionField;
+        
+        private int idField;
+        
+        private string nombreField;
+        
+        private double precioField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string descripcion {
+            get {
+                return this.descripcionField;
+            }
+            set {
+                this.descripcionField = value;
+                this.RaisePropertyChanged("descripcion");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public int id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+                this.RaisePropertyChanged("id");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string nombre {
+            get {
+                return this.nombreField;
+            }
+            set {
+                this.nombreField = value;
+                this.RaisePropertyChanged("nombre");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public double precio {
+            get {
+                return this.precioField;
+            }
+            set {
+                this.precioField = value;
+                this.RaisePropertyChanged("precio");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -869,6 +779,78 @@ namespace Farmacia_.Pablo {
         }
         
         public buscar_clienteResponse(Farmacia_.Pablo.cliente @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="obtener_pedidos", WrapperNamespace="http://webservices.sa/", IsWrapped=true)]
+    public partial class obtener_pedidosRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sa/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idPedido;
+        
+        public obtener_pedidosRequest() {
+        }
+        
+        public obtener_pedidosRequest(int idPedido) {
+            this.idPedido = idPedido;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="obtener_pedidosResponse", WrapperNamespace="http://webservices.sa/", IsWrapped=true)]
+    public partial class obtener_pedidosResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sa/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public Farmacia_.Pablo.pedido[] @return;
+        
+        public obtener_pedidosResponse() {
+        }
+        
+        public obtener_pedidosResponse(Farmacia_.Pablo.pedido[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="obtener_detalle_pedido", WrapperNamespace="http://webservices.sa/", IsWrapped=true)]
+    public partial class obtener_detalle_pedidoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sa/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idPedido;
+        
+        public obtener_detalle_pedidoRequest() {
+        }
+        
+        public obtener_detalle_pedidoRequest(int idPedido) {
+            this.idPedido = idPedido;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="obtener_detalle_pedidoResponse", WrapperNamespace="http://webservices.sa/", IsWrapped=true)]
+    public partial class obtener_detalle_pedidoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sa/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public Farmacia_.Pablo.pedido[] @return;
+        
+        public obtener_detalle_pedidoResponse() {
+        }
+        
+        public obtener_detalle_pedidoResponse(Farmacia_.Pablo.pedido[] @return) {
             this.@return = @return;
         }
     }
@@ -995,52 +977,6 @@ namespace Farmacia_.Pablo {
         
         public WSFarmacia11Client(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Farmacia_.Pablo.obtener_pedidosResponse Farmacia_.Pablo.WSFarmacia11.obtener_pedidos(Farmacia_.Pablo.obtener_pedidosRequest request) {
-            return base.Channel.obtener_pedidos(request);
-        }
-        
-        public Farmacia_.Pablo.pedido[] obtener_pedidos(int idPedido) {
-            Farmacia_.Pablo.obtener_pedidosRequest inValue = new Farmacia_.Pablo.obtener_pedidosRequest();
-            inValue.idPedido = idPedido;
-            Farmacia_.Pablo.obtener_pedidosResponse retVal = ((Farmacia_.Pablo.WSFarmacia11)(this)).obtener_pedidos(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Farmacia_.Pablo.obtener_pedidosResponse> Farmacia_.Pablo.WSFarmacia11.obtener_pedidosAsync(Farmacia_.Pablo.obtener_pedidosRequest request) {
-            return base.Channel.obtener_pedidosAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Farmacia_.Pablo.obtener_pedidosResponse> obtener_pedidosAsync(int idPedido) {
-            Farmacia_.Pablo.obtener_pedidosRequest inValue = new Farmacia_.Pablo.obtener_pedidosRequest();
-            inValue.idPedido = idPedido;
-            return ((Farmacia_.Pablo.WSFarmacia11)(this)).obtener_pedidosAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Farmacia_.Pablo.obtener_detalle_pedidoResponse Farmacia_.Pablo.WSFarmacia11.obtener_detalle_pedido(Farmacia_.Pablo.obtener_detalle_pedidoRequest request) {
-            return base.Channel.obtener_detalle_pedido(request);
-        }
-        
-        public Farmacia_.Pablo.pedido[] obtener_detalle_pedido(int idPedido) {
-            Farmacia_.Pablo.obtener_detalle_pedidoRequest inValue = new Farmacia_.Pablo.obtener_detalle_pedidoRequest();
-            inValue.idPedido = idPedido;
-            Farmacia_.Pablo.obtener_detalle_pedidoResponse retVal = ((Farmacia_.Pablo.WSFarmacia11)(this)).obtener_detalle_pedido(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Farmacia_.Pablo.obtener_detalle_pedidoResponse> Farmacia_.Pablo.WSFarmacia11.obtener_detalle_pedidoAsync(Farmacia_.Pablo.obtener_detalle_pedidoRequest request) {
-            return base.Channel.obtener_detalle_pedidoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Farmacia_.Pablo.obtener_detalle_pedidoResponse> obtener_detalle_pedidoAsync(int idPedido) {
-            Farmacia_.Pablo.obtener_detalle_pedidoRequest inValue = new Farmacia_.Pablo.obtener_detalle_pedidoRequest();
-            inValue.idPedido = idPedido;
-            return ((Farmacia_.Pablo.WSFarmacia11)(this)).obtener_detalle_pedidoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1235,6 +1171,52 @@ namespace Farmacia_.Pablo {
             Farmacia_.Pablo.buscar_clienteRequest inValue = new Farmacia_.Pablo.buscar_clienteRequest();
             inValue.nit = nit;
             return ((Farmacia_.Pablo.WSFarmacia11)(this)).buscar_clienteAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Farmacia_.Pablo.obtener_pedidosResponse Farmacia_.Pablo.WSFarmacia11.obtener_pedidos(Farmacia_.Pablo.obtener_pedidosRequest request) {
+            return base.Channel.obtener_pedidos(request);
+        }
+        
+        public Farmacia_.Pablo.pedido[] obtener_pedidos(int idPedido) {
+            Farmacia_.Pablo.obtener_pedidosRequest inValue = new Farmacia_.Pablo.obtener_pedidosRequest();
+            inValue.idPedido = idPedido;
+            Farmacia_.Pablo.obtener_pedidosResponse retVal = ((Farmacia_.Pablo.WSFarmacia11)(this)).obtener_pedidos(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Farmacia_.Pablo.obtener_pedidosResponse> Farmacia_.Pablo.WSFarmacia11.obtener_pedidosAsync(Farmacia_.Pablo.obtener_pedidosRequest request) {
+            return base.Channel.obtener_pedidosAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Farmacia_.Pablo.obtener_pedidosResponse> obtener_pedidosAsync(int idPedido) {
+            Farmacia_.Pablo.obtener_pedidosRequest inValue = new Farmacia_.Pablo.obtener_pedidosRequest();
+            inValue.idPedido = idPedido;
+            return ((Farmacia_.Pablo.WSFarmacia11)(this)).obtener_pedidosAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Farmacia_.Pablo.obtener_detalle_pedidoResponse Farmacia_.Pablo.WSFarmacia11.obtener_detalle_pedido(Farmacia_.Pablo.obtener_detalle_pedidoRequest request) {
+            return base.Channel.obtener_detalle_pedido(request);
+        }
+        
+        public Farmacia_.Pablo.pedido[] obtener_detalle_pedido(int idPedido) {
+            Farmacia_.Pablo.obtener_detalle_pedidoRequest inValue = new Farmacia_.Pablo.obtener_detalle_pedidoRequest();
+            inValue.idPedido = idPedido;
+            Farmacia_.Pablo.obtener_detalle_pedidoResponse retVal = ((Farmacia_.Pablo.WSFarmacia11)(this)).obtener_detalle_pedido(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Farmacia_.Pablo.obtener_detalle_pedidoResponse> Farmacia_.Pablo.WSFarmacia11.obtener_detalle_pedidoAsync(Farmacia_.Pablo.obtener_detalle_pedidoRequest request) {
+            return base.Channel.obtener_detalle_pedidoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Farmacia_.Pablo.obtener_detalle_pedidoResponse> obtener_detalle_pedidoAsync(int idPedido) {
+            Farmacia_.Pablo.obtener_detalle_pedidoRequest inValue = new Farmacia_.Pablo.obtener_detalle_pedidoRequest();
+            inValue.idPedido = idPedido;
+            return ((Farmacia_.Pablo.WSFarmacia11)(this)).obtener_detalle_pedidoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]

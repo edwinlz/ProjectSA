@@ -68,7 +68,6 @@
     <Content Include="CallCenter\medicamentos.aspx" />
     <Content Include="CallCenter\pago.aspx" />
     <Content Include="CallCenter\pedido.aspx" />
-    <Content Include="CallCenter\presencial.aspx" />
     <Content Include="CallCenter\RealizarPedido.aspx" />
     <Content Include="Presencial\compra.aspx" />
     <Content Include="Presencial\cliente.aspx" />
@@ -266,13 +265,6 @@
     </Compile>
     <Compile Include="CallCenter\pedido.aspx.designer.cs">
       <DependentUpon>pedido.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="CallCenter\presencial.aspx.cs">
-      <DependentUpon>presencial.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="CallCenter\presencial.aspx.designer.cs">
-      <DependentUpon>presencial.aspx</DependentUpon>
     </Compile>
     <Compile Include="CallCenter\RealizarPedido.aspx.cs">
       <DependentUpon>RealizarPedido.aspx</DependentUpon>

@@ -21,11 +21,13 @@
             <h1>Consultar Pedido </h1>
             <form id="formulario_1" runat="server">
                 <div class="form-group">
-                    <label for="nit_cliente">Numero de Farmacia</label>
+                    <label for="nit_cliente">Codigo de Pedido</label>
                     <asp:TextBox ID="id_farmacia" CssClass="form-control" runat="server" required=""></asp:TextBox>
                 </div>
                 <!--Boton enviar nuevo cliente-->
-                <asp:Button ID="Button1" CssClass="btn btn-success" runat="server" Text="Buscar" OnClick="Button1_Click1" />
+                <asp:Button ID="Button1" CssClass="btn btn-success" runat="server" Text="Buscar por Codigo" OnClick="Button1_Click1" />
+                <asp:Button ID="Button2" CssClass="btn btn-success" runat="server" Text="Ver todos" OnClick="Button2_Click"  />
+            
             </form>
 
             <div id="d" runat="server"></div>

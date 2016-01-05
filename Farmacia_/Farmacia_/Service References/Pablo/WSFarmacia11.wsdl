@@ -5,18 +5,6 @@
       <xsd:import schemaLocation="http://192.168.43.202:8080/WSFarmacia11/WSFarmacia11?xsd=1" namespace="http://webservices.sa/" />
     </xsd:schema>
   </types>
-  <message name="obtener_pedidos">
-    <part name="parameters" element="tns:obtener_pedidos" />
-  </message>
-  <message name="obtener_pedidosResponse">
-    <part name="parameters" element="tns:obtener_pedidosResponse" />
-  </message>
-  <message name="obtener_detalle_pedido">
-    <part name="parameters" element="tns:obtener_detalle_pedido" />
-  </message>
-  <message name="obtener_detalle_pedidoResponse">
-    <part name="parameters" element="tns:obtener_detalle_pedidoResponse" />
-  </message>
   <message name="cancelar_pedido">
     <part name="parameters" element="tns:cancelar_pedido" />
   </message>
@@ -65,6 +53,18 @@
   <message name="buscar_clienteResponse">
     <part name="parameters" element="tns:buscar_clienteResponse" />
   </message>
+  <message name="obtener_pedidos">
+    <part name="parameters" element="tns:obtener_pedidos" />
+  </message>
+  <message name="obtener_pedidosResponse">
+    <part name="parameters" element="tns:obtener_pedidosResponse" />
+  </message>
+  <message name="obtener_detalle_pedido">
+    <part name="parameters" element="tns:obtener_detalle_pedido" />
+  </message>
+  <message name="obtener_detalle_pedidoResponse">
+    <part name="parameters" element="tns:obtener_detalle_pedidoResponse" />
+  </message>
   <message name="pagar_pedido">
     <part name="parameters" element="tns:pagar_pedido" />
   </message>
@@ -78,14 +78,6 @@
     <part name="parameters" element="tns:agregar_clienteResponse" />
   </message>
   <portType name="WSFarmacia11">
-    <operation name="obtener_pedidos">
-      <input wsam:Action="http://webservices.sa/WSFarmacia11/obtener_pedidosRequest" message="tns:obtener_pedidos" />
-      <output wsam:Action="http://webservices.sa/WSFarmacia11/obtener_pedidosResponse" message="tns:obtener_pedidosResponse" />
-    </operation>
-    <operation name="obtener_detalle_pedido">
-      <input wsam:Action="http://webservices.sa/WSFarmacia11/obtener_detalle_pedidoRequest" message="tns:obtener_detalle_pedido" />
-      <output wsam:Action="http://webservices.sa/WSFarmacia11/obtener_detalle_pedidoResponse" message="tns:obtener_detalle_pedidoResponse" />
-    </operation>
     <operation name="cancelar_pedido">
       <input wsam:Action="http://webservices.sa/WSFarmacia11/cancelar_pedidoRequest" message="tns:cancelar_pedido" />
       <output wsam:Action="http://webservices.sa/WSFarmacia11/cancelar_pedidoResponse" message="tns:cancelar_pedidoResponse" />
@@ -118,6 +110,14 @@
       <input wsam:Action="http://webservices.sa/WSFarmacia11/buscar_clienteRequest" message="tns:buscar_cliente" />
       <output wsam:Action="http://webservices.sa/WSFarmacia11/buscar_clienteResponse" message="tns:buscar_clienteResponse" />
     </operation>
+    <operation name="obtener_pedidos">
+      <input wsam:Action="http://webservices.sa/WSFarmacia11/obtener_pedidosRequest" message="tns:obtener_pedidos" />
+      <output wsam:Action="http://webservices.sa/WSFarmacia11/obtener_pedidosResponse" message="tns:obtener_pedidosResponse" />
+    </operation>
+    <operation name="obtener_detalle_pedido">
+      <input wsam:Action="http://webservices.sa/WSFarmacia11/obtener_detalle_pedidoRequest" message="tns:obtener_detalle_pedido" />
+      <output wsam:Action="http://webservices.sa/WSFarmacia11/obtener_detalle_pedidoResponse" message="tns:obtener_detalle_pedidoResponse" />
+    </operation>
     <operation name="pagar_pedido">
       <input wsam:Action="http://webservices.sa/WSFarmacia11/pagar_pedidoRequest" message="tns:pagar_pedido" />
       <output wsam:Action="http://webservices.sa/WSFarmacia11/pagar_pedidoResponse" message="tns:pagar_pedidoResponse" />
@@ -129,24 +129,6 @@
   </portType>
   <binding name="WSFarmacia11PortBinding" type="tns:WSFarmacia11">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="obtener_pedidos">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="obtener_detalle_pedido">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
     <operation name="cancelar_pedido">
       <soap:operation soapAction="" />
       <input>
@@ -211,6 +193,24 @@
       </output>
     </operation>
     <operation name="buscar_cliente">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtener_pedidos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtener_detalle_pedido">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
