@@ -10,7 +10,7 @@ namespace Farmacia_.CallCenter
 {
     public partial class compra : System.Web.UI.Page
     {
-        static Servicio.Service1SoapClient wsb = new Servicio.Service1SoapClient();
+        static Pablo.WSFarmacia11Client wsb = new Pablo.WSFarmacia11Client();
         private static List<List<string>> compras = new List<List<string>>();
         public static String setTabla1 = "";
         public static String setTabla2 = "";
@@ -23,11 +23,11 @@ namespace Farmacia_.CallCenter
         protected void Button1_Click(object sender, EventArgs e)
         {
             d.Controls.Clear();
-            Servicio.cliente datos = wsb.consultar_cliente(nit_cliente.Text);
+            var datos = wsb.buscar_cliente(this.nit_cliente.Text);
 
             if (datos != null)
             {
-                dir_cliente.Text = datos.apellido;
+                dir_cliente.Text = datos.id.ToString();
                 mostrar("Cliente registrado");
             }
             else
@@ -43,21 +43,20 @@ namespace Farmacia_.CallCenter
             div_mostrar2.Controls.Add(new LiteralControl(setTabla2));
         }
 
-        private static String getStringTablaMedic(List<Servicio.medicamento> lista)
+        private static String getStringTablaMedic(List<Pablo.producto> lista)
         {
             if (lista.Count > 0)
             {
                 setTabla1 = "<br/><table class=\"table table-bordered\">" +
-                                "<thead><tr><th>Codigo</th><th>Nombre</th><th>Descripcion</th><th>Precion unitario</th><th>Unidades</th><th>Accion</th></thead>" +
+                                "<thead><tr><th>Codigo</th><th>Nombre</th><th>Descripcion</th><th>Precion unitario</th><th>Accion</th></thead>" +
                                 "<tbody>";
                 for (int i = 0; i < lista.Count; i++)
                 {
-                    setTabla1 += "<tr><td>" + lista[i].codigo_medicamento + "</td>"
+                    setTabla1 += "<tr><td>" + lista[i].id+ "</td>"
                                 + "<td>" + lista[i].nombre+ "</td>"
                                 + "<td>" + lista[i].descripcion + "</td>"
-                                + "<td>" + lista[i].precio_unitario + "</td>"
-                                + "<td><span class=\"badge\">" + lista[i].cantidad_disponible+ "</span></td>"
-                                + "<td><button id=\"btnO" + i + "\" class=\"btn btn-success\"onClick='agregar_codigo(" + lista[i].codigo_medicamento + "); return false;'>Agregar</button></td>"
+                                + "<td>" + lista[i].precio + "</td>"
+                                + "<td><button id=\"btnO" + i + "\" class=\"btn btn-success\"onClick='agregar_codigo(" + lista[i].id+ "); return false;'>Agregar</button></td>"
                           + "</tr>";
                 }
                 setTabla1 += "</tbody></table>";
@@ -94,9 +93,9 @@ namespace Farmacia_.CallCenter
             return setTabla2;
         }
 
-        public static List<Servicio.medicamento> buscar_nombre(List<Servicio.medicamento> lista, String nombre)
+        public static List<Pablo.producto> buscar_nombre(List<Pablo.producto> lista, String nombre)
         {
-            List<Servicio.medicamento> respuesta = new List<Servicio.medicamento>();
+            List<Pablo.producto> respuesta = new List<Pablo.producto>();
             for (int t = 0; t < lista.Count; t++)
             {
                 if (lista[t].nombre.Contains(nombre))
@@ -173,14 +172,17 @@ namespace Farmacia_.CallCenter
         [System.Web.Services.WebMethod]
         public static string GetTablaMedicamentos(string nombre)
         {
-            int codigo_farmacia = 0;
+            int codigo_farmacia = Convert.ToInt32(System.IO.File.ReadAllText("/Farmacia/codigo_tienda.txt")); ;
             String resultado = "";
-            Servicio.ArrayOfMedicamento datos = wsb.consultar_medicamentos(codigo_farmacia);
+
+            var datos = wsb.consultar_catalogo_medicamentos();
+            List<Pablo.producto> lista = datos.ToList<Pablo.producto>();
+
             if (datos != null)
             {
                 //obtengo datos de web service
-                List<Servicio.medicamento> lista = datos.ToList();
-                if (lista.Count > 0)
+               
+                if ( lista.Count> 0)
                 {
                     //aplico filtros
                     if (nombre != "")
@@ -205,16 +207,25 @@ namespace Farmacia_.CallCenter
 
         public void realizar_compra()
         {
-
+            
             int tienda = Convert.ToInt32(System.IO.File.ReadAllText("/Farmacia/codigo_tienda.txt"));
             
-            Servicio.cliente datos_cliente = wsb.consultar_cliente(nit_cliente.Text);
-            int cliente = Convert.ToInt32(datos_cliente.id_cliente);
-            ArrayOfInt data = wsb.registrar_compra(tienda, cliente, obtener_codigos(), obtener_unidades());
+            Pablo.cliente datos_cliente = wsb.buscar_cliente(nit_cliente.Text);
+            int cliente = Convert.ToInt32(datos_cliente.id);
 
-            List<int> datos_compra = data.ToList();
-            mostrar_aviso("El codigo de compra es <strong>" + datos_compra[0] + "</strong> Y el total es <strong>Q" + datos_compra[1] + "</strong>");
+            int pedido = wsb.agregar_pedido(cliente,Int32.Parse(this.id_callcenter.Text));
+
+
+            for (int i = 0; i < compras.Count; i++)
+            {
+                wsb.agregar_detalle_pedido(pedido,Convert.ToInt32(compras[i].ElementAt(0)),Convert.ToInt32(compras[i].ElementAt(1)));
+
+            }
+
+            Pablo.pago valor= wsb.pagar_pedido(pedido,1,false);
+            mostrar_aviso("El codigo de compra es <strong>" +pedido + "</strong> Y el total es <strong>Q" + valor.total + "</strong>");
             limpiar();
+        
         }
 
         public void cancelar_compra()

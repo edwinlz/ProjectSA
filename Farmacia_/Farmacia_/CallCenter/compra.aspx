@@ -121,6 +121,11 @@
                             </span>
                         </div>
                         <br />
+                        <div class="input-group">
+                            <asp:TextBox ID="id_callcenter" CssClass="form-control" runat="server" placeholder="Codigo Farmacia" required=""></asp:TextBox>
+              
+                        </div>
+                        <br />
                         <asp:TextBox ID="dir_cliente" CssClass="form-control" runat="server" placeholder="Direccion"></asp:TextBox>
                         <div id="d" runat="server">
                         </div>

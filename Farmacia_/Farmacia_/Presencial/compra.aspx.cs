@@ -173,7 +173,7 @@ namespace Farmacia_.Presencial
         [System.Web.Services.WebMethod]
         public static string GetTablaMedicamentos(string nombre)
         {
-            int codigo_farmacia = 0;
+            int codigo_farmacia = Convert.ToInt32(System.IO.File.ReadAllText("/Farmacia/codigo_tienda.txt")); ;
             String resultado = "";
             Servicio.ArrayOfMedicamento datos = wsb.consultar_medicamentos(codigo_farmacia);
             if (datos != null)
