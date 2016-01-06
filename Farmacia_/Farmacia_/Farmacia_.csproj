@@ -60,6 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CallCenter\callcenter.aspx" />
+    <Content Include="CallCenter\CancelarPedido.aspx" />
     <Content Include="CallCenter\cliente.aspx" />
     <Content Include="CallCenter\compra.aspx" />
     <Content Include="CallCenter\configuracion.aspx" />
@@ -69,6 +70,7 @@
     <Content Include="CallCenter\pago.aspx" />
     <Content Include="CallCenter\pedido.aspx" />
     <Content Include="CallCenter\RealizarPedido.aspx" />
+    <Content Include="Presencial\CancelarPedido.aspx" />
     <Content Include="Presencial\compra.aspx" />
     <Content Include="Presencial\cliente.aspx" />
     <Content Include="Presencial\consultarCliente.aspx" />
@@ -210,6 +212,13 @@
     <Compile Include="CallCenter\callcenter.aspx.designer.cs">
       <DependentUpon>callcenter.aspx</DependentUpon>
     </Compile>
+    <Compile Include="CallCenter\CancelarPedido.aspx.cs">
+      <DependentUpon>CancelarPedido.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CallCenter\CancelarPedido.aspx.designer.cs">
+      <DependentUpon>CancelarPedido.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CallCenter\cliente.aspx.cs">
       <DependentUpon>cliente.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -272,6 +281,13 @@
     </Compile>
     <Compile Include="CallCenter\RealizarPedido.aspx.designer.cs">
       <DependentUpon>RealizarPedido.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presencial\CancelarPedido.aspx.cs">
+      <DependentUpon>CancelarPedido.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presencial\CancelarPedido.aspx.designer.cs">
+      <DependentUpon>CancelarPedido.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presencial\compra.aspx.cs">
       <DependentUpon>compra.aspx</DependentUpon>

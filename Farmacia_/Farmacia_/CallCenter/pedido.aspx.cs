@@ -21,15 +21,45 @@ namespace Farmacia_.CallCenter
         protected void Button1_Click1(object sender, EventArgs e)
         {
             int code =Int32.Parse(this.id_farmacia.Text);
-            busqueda(code);
+
+            string texto = "";
+           texto+= busqueda(code);
+            texto+=Detalle(code);
+            d.Controls.Add(new LiteralControl(texto));
         }
+
 
         protected void Button2_Click(object sender, EventArgs e)
         {
-            busqueda(0);
+            
+            d.Controls.Add(new LiteralControl(busqueda(0)));
         }
 
-        private void busqueda(int param) {
+        private string Detalle(int code) {
+
+
+            Pablo.WSFarmacia11Client wsb = new Pablo.WSFarmacia11Client();
+
+
+
+            String texto = "<table class=\"table table-bordered\">" +
+                                "<thead><tr><th>Producto</th><th>Cantidad</th><th>Precio Unitario</th><th>subtotal</th></tr></thead>" +
+                                "<tbody>";
+            foreach (var item in wsb.obtener_detalle_pedido(code))
+            {
+
+                texto += "<tr>" +
+                     "<td>" + item.cliente + "</td><td>" + item.id + "</td><td>" +item.total+ "</td><td>"+item.subTotal+"</td>"+
+                     "</tr>";
+
+            }
+
+            texto += "</tbody></table>";
+
+            return texto;
+        }
+
+        private string busqueda(int param) {
             Pablo.WSFarmacia11Client wsb = new Pablo.WSFarmacia11Client();
 
 
@@ -47,7 +77,8 @@ namespace Farmacia_.CallCenter
             }
 
             texto += "</tbody></table>";
-            d.Controls.Add(new LiteralControl(texto));
+            return texto;
+            
         }
     }
 }
